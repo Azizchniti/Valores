@@ -6,8 +6,6 @@ import Hero from "./hero-page3";
 import OnlineCourse from "./thirdcomp";
 import WhyChooseUs from "./fourthcomp";
 import CarouselFeatures from "../contact";
-import Pricing from "../pricing";
-import OtherCourses from "../other-courses";
 import AboutSection from "./secondcomp";
 
 

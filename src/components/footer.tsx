@@ -15,7 +15,7 @@ export function Footer() {
             width={100}
             height={35}
           />
-          <Typography className="text-[11px] text-gray-400 leading-snug">
+          <Typography className="text-[11px] text-gray-400 leading-snug"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             © {CURRENT_YEAR} Valores Consultoria e Tecnologia. <br />
             Todos os direitos reservados. <br />
             CNPJ 28.179.189/0001-40
@@ -24,17 +24,17 @@ export function Footer() {
 
         {/* Middle Section */}
         <div className="flex justify-center text-center">
-          <Typography className="text-xs md:text-sm text-gray-300 font-medium">
+          <Typography className="text-xs md:text-sm text-gray-300 font-medium" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             Conectando inteligência, eficiência e inovação
           </Typography>
         </div>
 
         {/* Right Section */}
         <div className="flex flex-col items-end space-y-1">
-          <Typography className="text-xs text-gray-300">
+          <Typography className="text-xs text-gray-300"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             nossos@valores.com.br
           </Typography>
-          <Typography className="text-xs text-gray-300">
+          <Typography className="text-xs text-gray-300"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             (38) 9.9113-6197
           </Typography>
 
