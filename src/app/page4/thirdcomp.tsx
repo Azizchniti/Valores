@@ -60,7 +60,7 @@ export default function DepartmentsSection() {
         className="mt-3 text-[#68788B] max-w-2xl text-sm md:text-base"
         style={{ fontFamily: "TT Commons Pro" }}
       >
-          Nossa metodologia data-driven ajuda atacadistas, distribuidoras e indústrias a ler o cenário, prever demandas e estruturar processos e equipes para liderar seu segmento.Deixamos de lado os "achismos" e implementamos uma cultura de decisões baseadas em dados que geram lucro.
+          Nossa metodologia data-driven ajuda atacadistas, distribuidoras e indústrias a ler o cenário, prever demandas e estruturar processos e equipes para liderar seu segmento.Deixamos de lado os {"achismos"} e implementamos uma cultura de decisões baseadas em dados que geram lucro.
       </p>
 
        <h2

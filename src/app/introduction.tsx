@@ -27,16 +27,14 @@ export default function AboutSection() {
           {/* Text */}
     <div className="flex flex-col items-start gap-6 max-w-sm">
   <Typography
-    variant="h2"
-    className="text-xl lg:text-2xl font-bold leading-snug"
-  >
+              variant="h2"
+              className="text-xl lg:text-2xl font-bold leading-snug"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}  >
     <span className="text-blue-200">Descomplicamos a complexidade</span>{" "}
     para empoderar negócios
   </Typography>
 
   <Typography
-    className="text-base lg:text-lg text-gray-700 leading-relaxed"
-  >
+              className="text-base lg:text-lg text-gray-700 leading-relaxed"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}  >
     A Valores é uma consultoria de gestão e tecnologia focada em médias e
     grandes corporações. <br /> <br />
     Com mais de 83 especialistas, atuamos em todo o território nacional e
