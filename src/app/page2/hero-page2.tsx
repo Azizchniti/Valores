@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
     <section className="relative w-full h-[90vh] overflow-hidden">
       {/* Background */}
       <Image
-        src="/image/bgteam.png"
+        src="/image/backgrounds/bgteam.png"
         alt="Fundo"
         fill
         className="object-cover object-center"

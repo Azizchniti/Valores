@@ -10,7 +10,7 @@ export function Footer() {
         {/* Left Section */}
         <div className="flex flex-col items-start space-y-1">
           <Image
-            src="/image/LOGO.png"
+            src="/image/logos/LOGO.png"
             alt="Valores Logo"
             width={100}
             height={35}

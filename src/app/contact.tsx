@@ -113,7 +113,7 @@ export default function BusinessForm() {
                 className="flex items-center gap-2 rounded-xl border border-black bg-[rgba(0,0,0,0.3)] px-3 py-2"
               >
                 <Image
-                  src={`/image/${field.icon}.png`}
+                  src={`/image/icons/${field.icon}.png`}
                   alt={field.placeholder}
                   width={18}
                   height={18}

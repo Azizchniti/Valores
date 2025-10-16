@@ -30,7 +30,7 @@ export default function SecondComp() {
             className="flex items-center gap-2 bg-[#58A8AB] text-[#000] px-4 py-2 rounded-full font-semibold text-sm"
           >
             <Image
-              src="/image/block.png"
+              src="/image/icons/block.png"
               alt="icon"
               width={16}
               height={16}

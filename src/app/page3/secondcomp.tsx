@@ -69,7 +69,7 @@ export default function SecondComp() {
             whileHover={{ scale: 1.08 }}
           >
             <Image
-              src="/image/block.png"
+              src="/image/icons/block.png"
               alt="icon"
               width={16}
               height={16}
