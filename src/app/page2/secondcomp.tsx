@@ -2,8 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function secondcomp() {
+export default function SecondComp() {
+  const pills = [
+    "EXCESSO DE TRABALHO MANUAL E PLANILHAS",
+    "PROCESSOS LENTOS QUE ATRASAM DECISÕES",
+    "CUSTOS ELEVADOS COM TAREFAS REPETITIVAS",
+  ];
+
   return (
     <section className="py-16 px-6 bg-gray-50 flex flex-col items-center text-center">
       {/* Title */}
@@ -11,25 +18,25 @@ export default function secondcomp() {
         O FIM DO TRABALHO OPERACIONAL.
       </h2>
 
-      {/* Pills */}
+      {/* Pills with motion */}
       <div className="mt-6 flex flex-col gap-3">
-        {[
-          "EXCESSO DE TRABALHO MANUAL E PLANILHAS",
-          "PROCESSOS LENTOS QUE ATRASAM DECISÕES",
-          "CUSTOS ELEVADOS COM TAREFAS REPETITIVAS",
-        ].map((text, i) => (
-          <div
+        {pills.map((text, i) => (
+          <motion.div
             key={i}
-            className="flex items-center gap-2 bg-[#58A8AB] text-[#00000] px-4 py-2 rounded-full font-semibold text-sm"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: i * 0.3, ease: "easeOut" }}
+            whileHover={{ scale: 1.08 }}
+            className="flex items-center gap-2 bg-[#58A8AB] text-[#000] px-4 py-2 rounded-full font-semibold text-sm"
           >
             <Image
-              src="/image/block.png" // replace with your actual icon
+              src="/image/block.png"
               alt="icon"
               width={16}
               height={16}
             />
             {text}
-          </div>
+          </motion.div>
         ))}
       </div>
 

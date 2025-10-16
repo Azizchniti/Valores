@@ -15,8 +15,9 @@ const navItems = [
   { id: 1, label: "Soluções", href: "#solucoes" },
   { id: 2, label: "Quem somos", href: "#quem-somos" },
   { id: 3, label: "Cases de Sucesso", href: "#cases" },
-  { id: 4, label: "Trabalhe Conosco", href: "#trabalhe" },
-  { id: 5, label: "Blog", href: "#blog" },
+  { id: 4, label: "Blog", href: "#blog" },
+  { id: 5, label: "Faça Seu Diagnóstico", href: "#trabalhe" },
+  
 ];
 
 export function Navbar() {
@@ -60,9 +61,6 @@ export function Navbar() {
                   width={150}
                   height={30}
                   priority
-                  className={`object-contain cursor-pointer transition-all duration-300 ${
-                    isScrolling ? "filter invert" : ""
-                  }`}
                 />
               </Link>
          </div>

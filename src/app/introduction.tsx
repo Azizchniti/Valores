@@ -6,7 +6,8 @@ import { Typography } from "@material-tailwind/react";
 
 export default function AboutSection() {
   return (
-    <section className="py-20 px-8 bg-gray-50">
+    <section className="relative py-20 px-8 overflow-hidden">
+      
       <div className="container mx-auto flex flex-col lg:flex-row items-start gap-8 relative">
         {/* Left side - Image */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
@@ -34,7 +35,7 @@ export default function AboutSection() {
   </Typography>
 
   <Typography
-              className="text-base lg:text-lg text-gray-700 leading-relaxed"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}  >
+              className="text-base lg:text-lg text-gray-700 leading-relaxed text-justify"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}  >
     A Valores é uma consultoria de gestão e tecnologia focada em médias e
     grandes corporações. <br /> <br />
     Com mais de 83 especialistas, atuamos em todo o território nacional e

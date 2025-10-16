@@ -35,6 +35,7 @@ const reviews: ReviewProps[] = [
 export default function ReviewsSection() {
   return (
     <section className="w-full flex flex-col gap-14">
+            
       {/* Full-width horizontal bar */}
       <div
         className="w-full flex items-center justify-center py-8 gap-3"
@@ -42,7 +43,7 @@ export default function ReviewsSection() {
       >
         <Image
       alt="Arrow"
-      src="/image/chat.png" // should point ↗ top-right
+      src="/image/icons/chat.png" // should point ↗ top-right
       width={27}
       height={27}
     />
@@ -101,7 +102,7 @@ export default function ReviewsSection() {
         ))}
       </div>
 
-       <div className="mt-16 text-center">
+       {/* <div className="mt-16 text-center">
           <h2
             className="text-[#01050A] font-extrabold uppercase"
             style={{
@@ -113,16 +114,16 @@ export default function ReviewsSection() {
             Acompanhe nossa jornada e insights.
           </h2>
           <div className="mx-auto mt-2 h-[3px] w-[300px] bg-[#58A8AB] rounded-full" />
-        </div>
+        </div> */}
         {/* Instagram Feed Placeholder */}
-        <div className="mt-4 mb-12 flex justify-center">
+        {/* <div className="mt-4 mb-12 flex justify-center">
           <div className="w-full max-w-5xl h-64 flex items-center justify-center 
                           border-2 border-dashed border-red-500 rounded-2xl">
             <span className="text-red-600 font-bold uppercase text-lg">
               FEED INSTAGRAM
             </span>
           </div>
-        </div>
+        </div> */}
 
     </section>
     

@@ -35,7 +35,7 @@ export default function Campaign() {
       <div
         className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('/image/backgrounds/BG_AZIZ.webp')",
+          backgroundImage: "url('/image/backgrounds/bgcontact.webp')",
         }}
       >
         <section id="trabalhe">

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const DEPARTMENTS = [
   {
@@ -69,12 +70,15 @@ export default function DepartmentsSection() {
         criando uma operação unificada e inteligente. Veja alguns exemplos:
       </p>
 
-    {/* Cards */}
-<div className="mt-12 flex justify-center gap-6 w-full max-w-6xl ">
+   <div className="mt-12 flex justify-center gap-6 w-full max-w-6xl">
   {DEPARTMENTS.map(({ title, description }, i) => (
-    <div
+    <motion.div
       key={i}
       className="flex-shrink-0 flex flex-col items-stretch w-[220px] min-h-[220px] rounded-[20px] overflow-hidden"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
     >
       {/* Header */}
       <div className="bg-[#007C80] text-white font-bold py-3 text-center rounded-t-[20px]">
@@ -88,7 +92,7 @@ export default function DepartmentsSection() {
       >
         {description}
       </div>
-    </div>
+    </motion.div>
   ))}
 </div>
 

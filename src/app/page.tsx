@@ -13,11 +13,15 @@ export default function Campaign() {
   return (
     <>
       <Navbar />
-
-      {/* Quem somos */}
         <Hero />
-      {/* Extra intro section */}
-       <section id="quem-somos">
+      {/*introductions + solutions */}
+      <div
+        className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: "url('/image/backgrounds/13338.jpg')",
+        }}
+      >
+       <section id="quem-somos" >
       <BusinessCards />
       </section>
 
@@ -25,11 +29,15 @@ export default function Campaign() {
       <section id="solucoes">
         <OnlineCourse />
       </section>
+      </div>
 
       <AboutUs />
 
       {/* Cases de Sucesso */}
-      <section id="cases">
+      <section id="cases"  className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: "url('/image/backgrounds/13338.jpg')",
+        }}>
         <WhyChooseUs />
       </section>
 
@@ -37,7 +45,7 @@ export default function Campaign() {
       <div
         className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('/image/backgrounds/BG_AZIZ.webp')",
+          backgroundImage: "url('/image/backgrounds/bgcontact.webp')",
         }}
       >
         <section id="trabalhe">
