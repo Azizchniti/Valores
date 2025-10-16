@@ -1,69 +1,80 @@
-# [NextJS Tailwind Course Details Page](http://demos.creative-tim.com/nextjs-tailwind-course-details-page?ref=readme-ntpp) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/nextjs-tailwind-course-details-page&text=Check%20Material%20Tailwind%202%20Template%20made%20by%20@CreativeTim%20#webdesign%20#template%20#materialdesign%20#react%20https://www.creative-tim.com/product/nextjs-tailwind-course-details-page)
+Valores — Sua empresa no máximo potencial
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-tailwind-course-details-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-course-details-page/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/nextjs-tailwind-course-details-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-course-details-page/issues?q=is%3Aissue+is%3Aclosed)
+Valores is a management and technology consultancy focused on empowering medium and large corporations to operate at their highest potential. With more than 83 specialists, we operate nationally and internationally to build sustainable companies, high-performance teams, and strategic results.
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/745/original/material-tailwind-react-courses-details-template-thumbnail.jpg?1697636213)
+"Sua empresa opera no máximo potencial ou apenas no limite do possível? Nós somos a bússola que aponta o caminho para a alta performance. Transformamos processos, tecnologia e pessoas no seu maior ativo competitivo para destravar resultados que você ainda não alcançou."
 
-Introducing NextJS Tailwind Course Details Page, a comprehensive and user-friendly course details template designed using Tailwind CSS and Material Tailwind.
+"Descomplicamos a complexidade para empoderar negócios. A Valores é uma consultoria de gestão e tecnologia focada em médias e grandes corporações."
 
-Are you in need of a professionally designed and highly customizable course details page template, perfect for providing in-depth information about your client’s courses and enhancing the learning experience for their students? Look no further! We are excited to present to you our Free Course Details Page Template, thoughtfully crafted to cater to the needs of educators and online course providers.
+Features
 
-This template, built with Tailwind CSS and Material Tailwind, offers effortless customization to align perfectly with your course content and branding. The free course details page template includes essential features such as header, stats section, categories section, content section, and testimonial section.
+Modern React & Tailwind UI: Clean, responsive design for professional presentation.
 
-**Documentation built by Developers**
+Company Branding: Reflects Valores’ identity, vision, and mission.
 
-Each element is well presented in very complex documentation.
+Reviews Section: Highlights client testimonials, e.g.:
 
-You can read more about the [documentation here](https://www.material-tailwind.com/docs/react/installation).
+"Implementamos a solução de automação da Valores e os resultados foram imediatos. A redução de falhas operacionais e o ganho em produtividade superaram nossas expectativas. Além disso, o suporte da equipe foi ágil e atencioso do início ao fim."
 
-**HELPFUL LINKS**
+Analytics Integration: Includes tools like Nepcha for visitor tracking.
 
-- View [Github Repository](https://github.com/creativetimofficial/nextjs-tailwind-course-details-page)
-- Check [FAQ Page](https://www.creative-tim.com/faq)
+SEO Friendly: Proper metadata and structured layout.
 
-## [Demo](https://creative-tim.com/product/nextjs-tailwind-course-details-page)
+Demo
 
-## Quick start
+Live Preview
+ (replace # with your deployed URL)
 
-Quick start options:
+Quick Start
 
-- Download from [Creative Tim](https://www.creative-tim.com/product/nextjs-tailwind-course-details-page?ref=readme-ntpp).
+Ensure you have Node.js LTS installed: Download Node.js
 
-## Terminal Commands
+Clone this repository:
 
-1. Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/).
-2. Navigate to the root ./ directory of the product and run `npm install` to install our local dependencies.
-
-## Documentation
-
-The documentation for the Material Dashboard is hosted at our [website](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp).
-
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
-
-## Resources
-
-- [Live Preview](https://demos.creative-tim.com/nextjs-tailwind-course-details-page?ref=readme-ntpp)
-- [Download Page](https://www.creative-tim.com/product/nextjs-tailwind-course-details-page?ref=readme-ntpp)
-- Documentation is [here](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp)
-- [License Agreement](https://www.creative-tim.com/license?ref=readme-ntpp)
-- [Support](https://www.creative-tim.com/contact-us?ref=readme-ntpp)
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/nextjs-tailwind-course-details-page/issues)
-- [Nepcha Analytics](https://nepcha.com?ref=readme) - Analytics tool for your website
-
-## Reporting Issues
-
-We use GitHub Issues as the official bug tracker for the NextJS Tailwind Course Details Page. Here are some advices for our users that want to report an issue:
-
-1. Make sure that you are using the latest version of the NextJS Tailwind Course Details Page. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/nextjs-tailwind-course-details-page?ref=readme-ntpp).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+git clone https://github.com/YOUR_GITHUB_ACCOUNT/valores-frontend.git
 
 
+Navigate into the project directory:
+
+cd valores-frontend
 
 
+Install dependencies:
+
+npm install
 
 
+Start the development server:
+
+npm run dev
+
+
+Open http://localhost:3000
+ to view it in the browser.
+
+Deployment
+
+This project can be deployed on platforms like Vercel or Netlify. Make sure all static assets (images, logos) are in the /public folder for proper rendering.
+
+Browser Support
+
+Officially supports the last two versions of:
+
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="48" height="48"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="48" height="48"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="48" height="48"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="48" height="48">
+Resources
+
+Repository: GitHub Repo
+
+Documentation & Setup: Included in /docs folder
+
+Analytics: Nepcha Analytics
+
+Reporting Issues
+
+Please use GitHub Issues to report bugs or request features. Include:
+
+Steps to reproduce the problem.
+
+Browser and environment details.
+
+Screenshots if applicable.
