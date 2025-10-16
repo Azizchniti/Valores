@@ -166,7 +166,7 @@ export default function BusinessForm() {
         <div className="mx-auto mt-2 h-[7px] w-[230px] bg-[#58A8AB] rounded-full" />
 
         <p
-          className="text-[#68788B] text-center font-[TT Commons Pro] font-light mb-12 mx-auto mt-4"
+          className="text-[#8B949E] text-center font-[TT Commons Pro] font-light mb-12 mx-auto mt-4"
           style={{
             fontSize: "18px",
             lineHeight: "1.6",
