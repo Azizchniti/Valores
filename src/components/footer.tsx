@@ -45,13 +45,13 @@ export function Footer() {
 
           {/* Social Icons */}
           <div className="flex space-x-3 mt-1">
-            <a href="#" className="text-gray-400 hover:text-white text-xs">
+            <a href="https://www.facebook.com/valoressolucoes" className="text-gray-400 hover:text-white text-xs">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xs">
+            <a href="https://www.instagram.com/valoressolucoes/" className="text-gray-400 hover:text-white text-xs">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xs">
+            <a href="https://www.linkedin.com/company/valoressoluções/" className="text-gray-400 hover:text-white text-xs">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>
