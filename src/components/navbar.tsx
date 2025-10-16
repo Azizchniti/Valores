@@ -56,7 +56,7 @@ export function Navbar() {
             <div className="flex items-center relative z-50">
               <Link href="/" className="flex items-center" onClick={() => window.scrollTo(0,0)}>
                 <Image
-                  src="/image/logos/LOGO.png"
+                  src="/image/logos/Logo.png"
                   alt="Logo"
                   width={150}
                   height={30}
