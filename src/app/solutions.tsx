@@ -126,135 +126,85 @@ export default function ResultadosSection() {
         </div>
 
         {/* Solutions Section */}
-        <div className="mt-12 grid grid-flow-col auto-cols-max gap-x-4 justify-center">
-        {SOLUTIONS.map(({ icon, title, description, buttonText }, i) => (
-        <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-             whileHover={{ scale: 1.05, rotateY: i % 2 === 0 ? 5 : -5, transition: { type: "spring", stiffness: 150 } }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: i * 0.2, ease: "easeOut" }}
-            className="flex flex-col items-center w-[260px] min-h-[430px] rounded-[30px] border-[2px] border-[#58A8AB] bg-[#005255] p-5 gap-4"
-          >
-            {/* Icon container with fixed height */}
-            <div className="flex items-center justify-center w-full" style={{ minHeight: "70px" }}>
-              <Image src={icon} alt={`sol-${i}`} width={50} height={50} />
-            </div>
-
-            {/* Title */}
-            <h3
-              className="text-white font-bold uppercase text-center"
-              style={{
-                fontFamily: "TT Commons Pro",
-                fontSize: "22px",
-                lineHeight: "28px",
-              }}
-            >
-              {title}
-            </h3>
-
-            {/* Description */}
-            <p
-              className="text-white text-center"
-              style={{
-                fontFamily: "TT Commons Pro",
-                fontSize: "18px",
-                lineHeight: "20px",
-                fontWeight: 300,
-                opacity: 0.7,
-              }}
-            >
-              {description}
-            </p>
-
-    {/* Buttons with redirect */}
-    {i === 0 ? (
-   <Link
-  href="/page2"
-  scroll={false}
-  onClick={() => window.scrollTo(0, 0)}
-  className="w-full mt-auto flex"
+ {/* Solutions Section */}
+<div
+  className="mt-12 flex flex-wrap justify-center gap-4
+             md:flex-nowrap md:grid md:grid-flow-col md:auto-cols-max md:justify-center"
 >
-  <button
-    className="w-full flex items-center justify-start gap-2 
-      rounded-full bg-[#58A8AB] py-2 px-4 
-      text-white font-semibold text-[0.8rem] leading-tight
-      shadow-[0_8px_20px_0_rgba(88,168,171,0.15)]
-      transition-all duration-300 ease-in-out
-      hover:bg-[#49A2A5] hover:shadow-[0_12px_20px_0_rgba(88,168,171,0.2)]
-      hover:scale-105
-      overflow-hidden whitespace-nowrap"
-    style={{
-      fontFamily: "TT Commons Pro",
-      letterSpacing: "-0.2px",
-    }}
-  >
-    <span className="flex w-[20px] h-[20px] items-center justify-center bg-[#fafdff] rounded-full transition-colors duration-300 hover:bg-[#e0f4ff] shrink-0">
-      <Image alt="Arrow" src="/image/icons/arrow.png" width={10} height={10} />
-    </span>
-    <span className="truncate shrink text-center">{buttonText}</span>
-  </button>
-</Link>
+  {SOLUTIONS.map(({ icon, title, description, buttonText }, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{
+        scale: 1.05,
+        rotateY: i % 2 === 0 ? 5 : -5,
+        transition: { type: "spring", stiffness: 150 },
+      }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, delay: i * 0.2, ease: "easeOut" }}
+      className="flex flex-col items-center w-[260px] min-h-[430px] rounded-[30px] border-[2px] border-[#58A8AB] bg-[#005255] p-5 gap-4"
+    >
+      {/* Icon container with fixed height */}
+      <div className="flex items-center justify-center w-full" style={{ minHeight: "70px" }}>
+        <Image src={icon} alt={`sol-${i}`} width={50} height={50} />
+      </div>
 
-    ) : i === 1 ? (
-      <Link href="/page3" onClick={() => window.scrollTo(0,0)} scroll={false} className="w-full mt-auto flex">
-        <button
-          className="w-full flex items-center justify-start gap-3 rounded-full bg-[#58A8AB]
-           py-1 px-2 text-white font-semibold text-sm whitespace-nowrap
-            shadow-[0_80px_30px_0_rgba(88,168,171,0.05)] text-xs
-            transition-all duration-300 ease-in-out
-            hover:bg-[#49A2A5] hover:shadow-[0_12px_20px_0_rgba(88,168,171,0.2)] 
-            hover:scale-105"
-          style={{ fontFamily: "TT Commons Pro" }}
-        >
-          <span>
-            <div className="flex w-[20px] h-[20px] items-center justify-center p-1 bg-[#fafdff] 
-            rounded-full transition-colors duration-300
-            hover:bg-[#e0f4ff]">
-              <Image alt="Arrow" src="/image/icons/arrow.png" width={10} height={10} />
-            </div>
-          </span>
-          {buttonText}
-        </button>
-      </Link>
-    ) : 
-    i === 2 ? (
-      <Link href="/page4" scroll={false} onClick={() => window.scrollTo(0,0)} className="w-full mt-auto flex">
-        <button
-          className="w-full flex items-center justify-start gap-3 rounded-full bg-[#58A8AB] py-1 px-2 
-          text-white font-semibold text-sm whitespace-nowrap shadow-[0_80px_30px_0_rgba(88,168,171,0.05)]
-           text-xs  transition-all duration-300 ease-in-out
-            hover:bg-[#49A2A5] hover:shadow-[0_12px_20px_0_rgba(88,168,171,0.2)] 
-            hover:scale-105"
-          style={{ fontFamily: "TT Commons Pro" }}
-        >
-          <span>
-            <div className="flex w-[20px] h-[20px] items-center justify-center p-1 bg-[#fafdff] rounded-full
-                =rounded-full transition-colors duration-300
-              hover:bg-[#e0f4ff]">
-              <Image alt="Arrow" src="/image/icons/arrow.png" width={10} height={10} />
-            </div>
-          </span>
-          {buttonText}
-        </button>
-      </Link>
-     ): (
-      <button
-        className="mt-auto w-full flex items-center justify-start gap-3 rounded-full bg-[#58A8AB] py-1 px-2 text-white font-semibold text-sm whitespace-nowrap shadow-[0_80px_30px_0_rgba(88,168,171,0.05)] text-xs"
-        style={{ fontFamily: "TT Commons Pro" }}
+      {/* Title */}
+      <h3
+        className="text-white font-bold uppercase text-center"
+        style={{ fontFamily: "TT Commons Pro", fontSize: "22px", lineHeight: "28px" }}
       >
-        <span>
-          <div className="flex w-[20px] h-[20px] items-center justify-center p-1 bg-[#fafdff] rounded-full">
-            <Image alt="Arrow" src="/image/icons/arrow.png" width={10} height={10} />
-          </div>
-        </span>
-        {buttonText}
-      </button>
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p
+        className="text-white text-center"
+        style={{
+          fontFamily: "TT Commons Pro",
+          fontSize: "18px",
+          lineHeight: "20px",
+          fontWeight: 300,
+          opacity: 0.7,
+        }}
+      >
+        {description}
+      </p>
+
+      {/* Buttons (exact same as your original style) */}
+      {buttonText && (
+        <Link
+          href={i === 0 ? "/page2" : i === 1 ? "/page3" : "/page4"}
+          scroll={false}
+          onClick={() => window.scrollTo(0, 0)}
+          className="w-full mt-auto flex"
+        >
+          <button
+            className="w-full flex items-center justify-start gap-2 
+              rounded-full bg-[#58A8AB] py-2 px-1
+              text-white font-semibold text-[0.8rem] leading-tight
+              shadow-[0_8px_20px_0_rgba(88,168,171,0.15)]
+              transition-all duration-300 ease-in-out
+              hover:bg-[#49A2A5] hover:shadow-[0_12px_20px_0_rgba(88,168,171,0.2)]
+              hover:scale-105
+              whitespace-normal text-center"
+            style={{
+              fontFamily: "TT Commons Pro",
+              letterSpacing: "-0.2px",
+            }}
+          >
+            <span className="flex w-[20px] h-[20px] items-center justify-center bg-[#fafdff] rounded-full transition-colors duration-300 hover:bg-[#e0f4ff] shrink-0">
+              <Image alt="Arrow" src="/image/icons/arrow.png" width={10} height={10} />
+            </span>
+            <span className="truncate shrink text-center">{buttonText}</span>
+          </button>
+        </Link>
       )}
-   </motion.div>
-))}
-        </div>
+    </motion.div>
+  ))}
+</div>
+
       </div>
     </section>
   );

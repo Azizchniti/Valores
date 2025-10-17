@@ -70,7 +70,10 @@ export default function DepartmentsSection() {
         criando uma operação unificada e inteligente. Veja alguns exemplos:
       </p>
 
-   <div className="mt-12 flex justify-center gap-6 w-full max-w-6xl">
+  <div
+  className="mt-12 flex flex-wrap justify-center gap-6 w-full max-w-6xl
+              md:flex-nowrap md:justify-center"
+>
   {DEPARTMENTS.map(({ title, description }, i) => (
     <motion.div
       key={i}
@@ -78,7 +81,7 @@ export default function DepartmentsSection() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.5 }}
-      transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
+      transition={{ duration: 0.7, delay: i * 0.15, ease: 'easeOut' }}
     >
       {/* Header */}
       <div className="bg-[#007C80] text-white font-bold py-3 text-center rounded-t-[20px]">
@@ -87,8 +90,13 @@ export default function DepartmentsSection() {
 
       {/* Body */}
       <div
-        className="flex-grow flex items-center justify-center bg-[#D9D9D9] px-4 py-2 text-[#323232] text-sm md:text-base text-center rounded-b-[20px]"
-        style={{ fontFamily: "TT Commons Pro" }}
+        className="flex-grow flex items-center justify-center bg-[#D9D9D9] px-4 py-3 
+                   text-[#323232] text-sm sm:text-base text-center leading-snug
+                   rounded-b-[20px] whitespace-normal"
+        style={{
+          fontFamily: 'TT Commons Pro',
+          wordBreak: 'break-word', // makes sure long words don’t overflow
+        }}
       >
         {description}
       </div>

@@ -9,15 +9,15 @@ const Hero: React.FC = () => {
       id: 1,
       title: "Fluxos de trabalho automatizados",
       value: "+3.277",
-      progress: 90, // %
-       style: "translate-y-[17rem] -translate-x-[450px]",
+      progress: 90,
+      desktopStyle: "translate-y-[17rem] -translate-x-[450px]",
     },
     {
       id: 2,
       title: "Horas humanas economizadas anualmente",
       value: "+2.2 Milhões",
-      progress: 70, // %
-      style: "translate-y-[11rem] -translate-x-[50px]",
+      progress: 70,
+      desktopStyle: "translate-y-[11rem] -translate-x-[50px]",
     },
   ];
 
@@ -37,60 +37,79 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#000409] to-transparent" />
 
       {/* Main content */}
-     <div
-  className="
-    relative z-10 flex flex-col gap-4 
-    max-w-md          /* narrower width → taller block */
-    pl-12 md:pl-28    /* aligns with navbar */
-    top-1/4
-  "
->
-    <h1 className="text-xl md:text-2xl lg:text-2xl xl:text-3xl font-bold text-white leading-snug">
-      Sua empresa opera no <span className="text-[#58a8ab]">máximo potencial</span> ou apenas no limite do possível?
-    </h1>
+      <div
+        className="
+          relative z-10 flex flex-col gap-4 
+          max-w-md pl-6 sm:pl-12 md:pl-28
+          text-center sm:text-left
+          top-[22%] sm:top-1/4
+          md:top-[22%] lg:top-[22%]
+          max-md:top-[32%]
+        "
+      >
+        <h1 className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold text-white leading-snug">
+          Sua empresa opera no{" "}
+          <span className="text-[#58a8ab]">máximo potencial</span> ou apenas no
+          limite do possível?
+        </h1>
 
-    <p className="text-sm md:text-base lg:text-base xl:text-lg text-[#68778a] font-light leading-relaxed">
-      Nós somos a bússola que aponta o caminho para a alta performance.
-      Transformamos processos, tecnologia e pessoas no seu maior ativo
-      competitivo para destravar resultados que você ainda não alcançou.
-    </p>
+        <p className="text-xs sm:text-sm md:text-base xl:text-lg text-[#aab3bf] font-light leading-relaxed">
+          Nós somos a bússola que aponta o caminho para a alta performance.
+          Transformamos processos, tecnologia e pessoas no seu maior ativo
+          competitivo para destravar resultados que você ainda não alcançou.
+        </p>
 
+        {/* Button */}
+        <div className="mt-3 sm:mt-5 max-md:mt-8">
+          <button
+            onClick={() => {
+              const target = document.getElementById("trabalhe");
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="
+              flex items-center justify-center sm:justify-start gap-3
+              px-4 sm:px-5 py-2
+              bg-[#58a8ab] rounded-full border-solid
+              shadow-[0px_6px_16px_#58a8ab57,0px_20px_20px_#58a8ab4c]
+              hover:bg-[#4a9699] transition
+              whitespace-nowrap
+            "
+          >
+            <div className="flex w-7 h-7 items-center justify-center bg-[#fafdff] rounded-full">
+              <Image alt="Arrow" src="/image/icons/arrow.png" width={12} height={12} />
+            </div>
+            <span className="font-bold text-[#000409] text-xs sm:text-sm text-center">
+              SOLICITAR DIAGNÓSTICO ESTRATÉGICO
+            </span>
+          </button>
+        </div>
+      </div>
 
-  {/* Button */}
-  <button
-    onClick={() => {
-      const target = document.getElementById("trabalhe");
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    }}
-    className="flex items-center gap-3 px-5 py-2 bg-[#58a8ab] rounded-full border-solid shadow-[0px_6px_16px_#58a8ab57,0px_20px_20px_#58a8ab4c] hover:bg-[#4a9699] transition leading-snug whitespace-nowrap"
-  >
-    <div className="flex w-7 h-7 items-center justify-center bg-[#fafdff] rounded-full">
-      <Image alt="Arrow" src="/image/icons/arrow.png" width={12} height={12} />
-    </div>
-    <span className="font-bold text-[#000409] text-sm">
-      SOLICITAR DIAGNÓSTICO ESTRATÉGICO
-    </span>
-  </button>
-
-
-</div>
-
-
-      {/* Stats */}
-      <div className="absolute top-1/4 right-12 flex gap-4">
+      {/* Stats – keep same for desktop, hide for mobile */}
+      <div
+        className="
+          absolute top-1/4 right-12 flex gap-4
+          max-lg:right-6
+          max-md:hidden
+        "
+      >
         {statisticsData.map((stat) => (
           <div
             key={stat.id}
-            className={`z-10 w-[160px] h-[90px] bg-[#000408ad] rounded-xl backdrop-blur-md p-2 flex flex-col ${stat.style}`}
+            className={`
+              z-10 w-[160px] h-[90px] bg-[#000408ad] rounded-xl backdrop-blur-md p-2 flex flex-col
+              ${stat.desktopStyle}
+            `}
           >
             <h3 className="font-bold text-[#e3e3e3] text-xs leading-tight">
               {stat.title}
             </h3>
-            <p className="text-[#58a8ab] font-semibold text-sm">{stat.value}</p>
+            <p className="text-[#58a8ab] font-semibold text-sm">
+              {stat.value}
+            </p>
 
-            {/* Progress bar */}
             <div className="mt-auto">
               <div className="h-1 bg-white rounded-full overflow-hidden">
                 <div
