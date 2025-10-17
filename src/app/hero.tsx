@@ -1,3 +1,4 @@
+// ...existing code...
 "use client";
 
 import React from "react";
@@ -42,9 +43,7 @@ const Hero: React.FC = () => {
           relative z-10 flex flex-col gap-4 
           max-w-md pl-6 sm:pl-12 md:pl-28
           text-center sm:text-left
-          top-[22%] sm:top-1/4
-          md:top-[22%] lg:top-[22%]
-          max-md:top-[32%]
+          top-[32%] md:top-[22%]
         "
       >
         <h1 className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold text-white leading-snug">
@@ -87,42 +86,72 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Stats – keep same for desktop, hide for mobile */}
-      <div
-        className="
-          absolute top-1/4 right-12 flex gap-4
-          max-lg:right-6
-          max-md:hidden
-        "
-      >
-        {statisticsData.map((stat) => (
-          <div
-            key={stat.id}
-            className={`
-              z-10 w-[160px] h-[90px] bg-[#000408ad] rounded-xl backdrop-blur-md p-2 flex flex-col
-              ${stat.desktopStyle}
-            `}
-          >
-            <h3 className="font-bold text-[#e3e3e3] text-xs leading-tight">
-              {stat.title}
-            </h3>
-            <p className="text-[#58a8ab] font-semibold text-sm">
-              {stat.value}
-            </p>
+      {/* Stats – desktop (keeps original layout) */}
+      <div className="hidden md:block">
+        <div
+          className="
+            absolute top-1/4 right-12 flex gap-4
+            max-lg:right-6
+          "
+        >
+          {statisticsData.map((stat) => (
+            <div
+              key={stat.id}
+              className={`
+                z-10 w-[160px] h-[90px] bg-[#000408ad] rounded-xl backdrop-blur-md p-2 flex flex-col
+                ${stat.desktopStyle}
+              `}
+            >
+              <h3 className="font-bold text-[#e3e3e3] text-xs leading-tight">
+                {stat.title}
+              </h3>
+              <p className="text-[#58a8ab] font-semibold text-sm">
+                {stat.value}
+              </p>
 
-            <div className="mt-auto">
-              <div className="h-1 bg-white rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-[#58a8ab] transition-all duration-500"
-                  style={{ width: `${stat.progress}%` }}
-                />
+              <div className="mt-auto">
+                <div className="h-1 bg-white rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-[#58a8ab] transition-all duration-500"
+                    style={{ width: `${stat.progress}%` }}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+
+      {/* Stats – mobile: compact, stacked/scrollable and non-translated so it's usable on small screens */}
+      <div className="md:hidden absolute bottom-6 left-4 right-4 z-10">
+        <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
+          {statisticsData.map((stat) => (
+            <div
+              key={stat.id}
+              className="min-w-[140px] h-[76px] bg-[#000408ad] rounded-xl backdrop-blur-md p-2 flex flex-col"
+            >
+              <h3 className="font-bold text-[#e3e3e3] text-[11px] leading-tight line-clamp-2">
+                {stat.title}
+              </h3>
+              <p className="text-[#58a8ab] font-semibold text-sm">
+                {stat.value}
+              </p>
+
+              <div className="mt-auto">
+                <div className="h-1 bg-white rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-[#58a8ab] transition-all duration-500"
+                    style={{ width: `${stat.progress}%` }}
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Hero;
+// ...existing code...
