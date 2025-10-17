@@ -39,9 +39,28 @@ export function Footer() {
           <Typography style={{ fontFamily: "TT Commons Pro",fontWeight: 700, }} className="text-xs text-gray-300"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             nossos@valores.com.br
           </Typography>
-          <Typography style={{ fontFamily: "TT Commons Pro",fontWeight: 700, }} className="text-xs text-gray-300"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-            (38) 9.9113-6197
-          </Typography>
+          <Typography
+              style={{
+                fontFamily: "TT Commons Pro",
+                fontWeight: 700,
+              }}
+              className="text-xs text-gray-300 hover:text-[#58a8ab] transition cursor-pointer"
+              placeholder={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
+              <a
+                href="https://wa.me/5538991136197"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline"
+              >
+                (38) 9.9113-6197
+              </a>
+            </Typography>
+
 
           {/* Social Icons */}
           <div className="flex space-x-3 mt-1">
