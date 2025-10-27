@@ -88,7 +88,7 @@ export default function ResultadosSection() {
           <CountUp
             start={0}
             end={numericValue}
-            duration={10}
+            duration={15}
             decimals={numericValue % 1 !== 0 ? 1 : 0}
             prefix={isPlus ? "+" : ""}
             suffix={isMillion ? " Mi" : value.includes("%") ? "%" : ""}

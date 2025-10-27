@@ -64,7 +64,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="no-underline"
             >
-              (38) 9.9113-6197
+             +55 (38) 9.9113-6197
             </a>
           </Typography>
 

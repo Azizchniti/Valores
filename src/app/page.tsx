@@ -17,9 +17,7 @@ export default function Campaign() {
       {/*introductions + solutions */}
       <div
         className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: "url('/image/backgrounds/13338.jpg')",
-        }}
+       
       >
        <section id="quem-somos" >
       <BusinessCards />
@@ -36,7 +34,7 @@ export default function Campaign() {
       {/* Cases de Sucesso */}
       <section id="cases"  className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('/image/backgrounds/13338.jpg')",
+          backgroundImage: "url('/image/backgrounds/reviews-bg2.svg')",
         }}>
         <WhyChooseUs />
       </section>
