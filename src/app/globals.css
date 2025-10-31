@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/tt-commons-pro-font/TT-Commons-Pro-Regular-GFXTRA.COM-iF66f1111965640.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/tt-commons-pro-font/TT-Commons-Pro-Medium-GFXTRA.COM-iF66f1111919af9.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/tt-commons-pro-font/TT-Commons-Pro-Bold-GFXTRA.COM-iF66f11118bc78d.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/tt-commons-pro-font/TT-Commons-Pro-Black-GFXTRA.COM-iF66f11118a12f2.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Luxora Grotesk", sans-serif;
+}
+/* ===========================
+   Luxora Grotesk Font Family
+   =========================== */
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-Book.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-BookItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("/fonts/Luxora Grotesk/Desktop Fonts/TTF/LuxoraGrotesk-HeavyItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
