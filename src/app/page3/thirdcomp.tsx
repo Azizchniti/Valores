@@ -79,7 +79,6 @@ export default function DepartmentsSection() {
       {/* Title */}
       <motion.h2
         className="text-white font-extrabold text-lg md:text-xl leading-snug"
-        style={{ fontFamily: "Luxora Grotesk" }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -90,7 +89,6 @@ export default function DepartmentsSection() {
       {/* Subtitle */}
       <motion.p
         className="mt-3 text-[#B8C3CE] max-w-2xl text-sm md:text-base"
-        style={{ fontFamily: "Luxora Grotesk" }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
@@ -105,7 +103,6 @@ export default function DepartmentsSection() {
       {/* Second Title */}
       <motion.h2
         className="text-white font-extrabold text-lg md:text-xl leading-snug mt-8"
-        style={{ fontFamily: "Luxora Grotesk" }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.3 }}
@@ -141,7 +138,6 @@ export default function DepartmentsSection() {
             {/* Body */}
             <div
               className="flex-grow flex items-center justify-center text-[#1C1C1C] px-4 py-3 text-sm md:text-base text-center"
-              style={{ fontFamily: "Luxora Grotesk" }}
             >
               {description}
             </div>

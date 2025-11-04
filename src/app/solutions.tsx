@@ -50,7 +50,6 @@ export default function ResultadosSection() {
           <h2
             className="text-[#01050A] font-extrabold uppercase mt-2"
             style={{
-              fontFamily: "Luxora Grotesk",
               fontSize: "26px",
               lineHeight: "38px",
               letterSpacing: "0.8px",
@@ -82,7 +81,7 @@ export default function ResultadosSection() {
         <Image src={icon} alt={`kpi-${i}`} width={40} height={40} className="mb-2" />
       <h3
         className="text-[#000] font-extrabold uppercase m-0 leading-none"
-        style={{ fontFamily: "Luxora Grotesk", fontSize: "24px", letterSpacing: "0.5px" }}
+        style={{  fontSize: "24px", letterSpacing: "0.5px" }}
       >
         {i < 3 ? ( // change from i < 2 to i < 3
           <CountUp
@@ -100,7 +99,7 @@ export default function ResultadosSection() {
       </h3>
         <p
           className="text-[#000] font-normal m-0 mt-2 text-center max-w-[160px]"
-          style={{ fontFamily: "Luxora Grotesk", fontSize: "15px", lineHeight: "18px" }}
+          style={{  fontSize: "15px", lineHeight: "18px" }}
         >
           {subtitle}
         </p>
@@ -115,7 +114,6 @@ export default function ResultadosSection() {
           <h2
             className="text-[#01050A] font-extrabold uppercase"
             style={{
-              fontFamily: "Luxora Grotesk",
               fontSize: "28px",
               lineHeight: "40px",
             }}
@@ -153,7 +151,7 @@ export default function ResultadosSection() {
       {/* Title */}
       <h3
         className="text-white font-bold uppercase text-center"
-        style={{ fontFamily: "Luxora Grotesk", fontSize: "22px", lineHeight: "28px" }}
+        style={{ fontSize: "22px", lineHeight: "28px" }}
       >
         {title}
       </h3>
@@ -162,7 +160,6 @@ export default function ResultadosSection() {
       <p
         className="text-white text-center"
         style={{
-          fontFamily: "Luxora Grotesk",
           fontSize: "18px",
           lineHeight: "20px",
           fontWeight: 300,
@@ -190,7 +187,6 @@ export default function ResultadosSection() {
               hover:scale-105
               whitespace-normal text-center"
             style={{
-              fontFamily: "Luxora Grotesk",
               letterSpacing: "-0.2px",
             }}
           >

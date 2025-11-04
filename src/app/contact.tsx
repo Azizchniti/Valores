@@ -65,33 +65,35 @@ export default function BusinessForm() {
     >
       <section className="flex flex-col lg:flex-row items-start justify-center gap-12 lg:gap-24">
         {/* Left side - Text section */}
-        <div className="mt-16 flex flex-col items-start text-left px-4 lg:px-0 font-luxora">
-          <h2
-            className="text-[#E3E3E3] font-extrabold uppercase"
-            style={{
-              fontSize: "36px",
-              lineHeight: "48px",
-            }}
-          >
-            Chega de navegar em meio às<br /> tempestades do dia a dia.
-          </h2>
+    <div className="mt-16 flex flex-col items-start text-left px-4 lg:px-0 ml-6">
+  <h2
+    className="text-[#E3E3E3] font-semibold uppercase"
+    style={{
+      fontSize: "36px",
+      lineHeight: "48px",
+    }}
+  >
+    Chega de navegar em meio às tempestades do dia a dia.
+  </h2>
 
-          <div className="mt-4 h-[7px] w-[230px] bg-[#58A8AB] rounded-full" />
+  <div className="mt-4 h-[7px] w-[230px] bg-[#58A8AB] rounded-full text-justify" />
 
-          <p
-            className="text-[#8B949E] font-light mt-4 mb-12"
-            style={{
-              fontSize: "20px",
-              lineHeight: "1.6",
-              maxWidth: "340px",
-            }}
-          >
-            Nossa equipe de especialistas está pronta para mapear suas oportunidades e apontar o caminho para a alta performance. Preencha o formulário e agende um diagnóstico estratégico, sem compromisso.
-          </p>
-        </div>
+  <p
+    className="text-[#8B949E] font-light mt-4 mb-12 "
+    style={{
+      fontSize: "20px",
+      lineHeight: "1.6",
+      maxWidth: "520px", // increased width to allow more horizontal space
+    }}
+  >
+    Nossa equipe de especialistas está pronta para mapear suas oportunidades e apontar o caminho para a alta performance. 
+    Preencha o formulário e agende um diagnóstico estratégico, sem compromisso.
+  </p>
+</div>
+
 
         {/* Right side - Form */}
-        <div className="relative z-10 w-full max-w-2xl rounded-2xl border border-[#58A8AB] bg-[rgba(27,34,42,0.9)] backdrop-blur-md p-6 shadow-lg font-luxora">
+        <div className="relative z-10 w-full max-w-2xl rounded-2xl border border-[#58A8AB] bg-[rgba(27,34,42,0.9)] backdrop-blur-md p-6 shadow-lg ">
           {/* Icon */}
           <div className="flex justify-center mb-4">
             <div
@@ -134,7 +136,7 @@ export default function BusinessForm() {
                 value={formData.nome}
                 onChange={handleChange}
                 placeholder="Nome"
-                className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 font-luxora"
+                className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
               />
             </div>
 
@@ -160,7 +162,7 @@ export default function BusinessForm() {
                     value={formData[field.name as keyof typeof formData]}
                     onChange={handleChange}
                     placeholder={field.placeholder}
-                    className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 font-luxora"
+                    className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
                   />
                 </div>
               ))}
@@ -188,7 +190,7 @@ export default function BusinessForm() {
                     value={formData[field.name as keyof typeof formData]}
                     onChange={handleChange}
                     placeholder={field.placeholder}
-                    className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 font-luxora"
+                    className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
                   />
                 </div>
               ))}
@@ -228,7 +230,7 @@ export default function BusinessForm() {
                   value={formData[field.name as keyof typeof formData]}
                   onChange={handleChange}
                   placeholder={field.placeholder}
-                  className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 font-luxora"
+                  className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
                 />
               </div>
             ))}
@@ -237,7 +239,7 @@ export default function BusinessForm() {
             <button
               type="submit"
               disabled={loading}
-              className="mt-3 w-full rounded-[36px] py-2 text-black font-luxora font-semibold text-sm 
+              className="mt-3 w-full rounded-[36px] py-2 text-black  font-semibold text-sm 
                         transform transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 disabled:opacity-60"
               style={{
                 background:
@@ -248,7 +250,7 @@ export default function BusinessForm() {
             </button>
 
             {status && (
-              <p className="text-center text-white mt-2 text-sm font-luxora">{status}</p>
+              <p className="text-center text-white mt-2 text-sm ">{status}</p>
             )}
           </form>
         </div>

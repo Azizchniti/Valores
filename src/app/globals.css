@@ -35,9 +35,11 @@ html {
   font-style: normal;
   font-display: swap;
 }
-body {
-  font-family: "Luxora Grotesk", sans-serif;
+html, body, *:not(i):not(.fa):not([class*="fa-"]) {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
 }
+
+
 /* ===========================
    Luxora Grotesk Font Family
    =========================== */
@@ -120,3 +122,23 @@ body {
   font-style: italic;
   font-display: swap;
 }
+
+/* Plus Jakarta Sans - Variable Font */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+

@@ -20,7 +20,6 @@ export function Footer() {
           <Typography
             className="text-[11px] leading-relaxed text-gray-400"
             style={{
-              fontFamily: "Luxora Grotesk",
               fontWeight: 700,
             }}  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             © {CURRENT_YEAR} Valores Consultoria e Tecnologia. <br />
@@ -32,9 +31,9 @@ export function Footer() {
         {/* Middle Section */}
         <div className="flex justify-center mb-6 md:mb-0">
           <Typography
-            className="text-sm md:text-base text-gray-200 italic"
+            className="text-sm md:text-base text-gray-200 italic text-center"
             style={{
-              fontFamily: "Luxora Grotesk",
+            
               fontWeight: 700,
             }}  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             “Conectando inteligência, eficiência e inovação”
@@ -46,7 +45,6 @@ export function Footer() {
           <Typography
             className="text-xs md:text-sm text-gray-300 hover:text-[#58a8ab] transition"
             style={{
-              fontFamily: "Luxora Grotesk",
               fontWeight: 700,
             }}  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             nossos@valores.com.br
@@ -55,7 +53,6 @@ export function Footer() {
           <Typography
             className="text-xs md:text-sm text-gray-300 hover:text-[#58a8ab] transition cursor-pointer"
             style={{
-              fontFamily: "Luxora Grotesk",
               fontWeight: 700,
             }}  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             <a

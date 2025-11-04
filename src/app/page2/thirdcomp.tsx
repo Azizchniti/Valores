@@ -55,7 +55,6 @@ export default function DepartmentsSection() {
       {/* Title */}
       <h2
         className="text-white font-extrabold text-lg md:text-xl leading-snug"
-        style={{ fontFamily: "Luxora Grotesk" }}
       >
         Automatize Qualquer <br />
         <span className="font-extrabold">Departamento, De Ponta A Ponta.</span>
@@ -64,7 +63,6 @@ export default function DepartmentsSection() {
       {/* Subtitle */}
       <p
         className="mt-3 text-[#68788B] max-w-2xl text-sm md:text-base"
-        style={{ fontFamily: "Luxora Grotesk" }}
       >
         Conectamos todas as áreas da sua empresa, do chão de fábrica à diretoria,
         criando uma operação unificada e inteligente. Veja alguns exemplos:
@@ -94,7 +92,6 @@ export default function DepartmentsSection() {
                    text-[#323232] text-sm sm:text-base text-center leading-snug
                    rounded-b-[20px] whitespace-normal"
         style={{
-          fontFamily: 'Luxora Grotesk',
           wordBreak: 'break-word', // makes sure long words don’t overflow
         }}
       >

@@ -39,7 +39,7 @@ function KPIItem({ icon, value, subtitle, index }: { icon: string; value: string
       />
       <h3
         className="text-[#000] font-extrabold uppercase m-0 leading-none"
-        style={{ fontFamily: "Luxora Grotesk", fontSize: "24px", letterSpacing: "0.5px" }}
+        style={{  fontSize: "24px", letterSpacing: "0.5px" }}
       >
         {index < 3 ? (
           <CountUp
@@ -58,7 +58,6 @@ function KPIItem({ icon, value, subtitle, index }: { icon: string; value: string
       <p
         className="text-[#000] font-normal m-0 mt-2 text-center max-w-[160px]"
         style={{
-          fontFamily: "Luxora Grotesk",
           fontSize: "15px",
           lineHeight: "18px",
         }}
@@ -78,7 +77,6 @@ export default function ResultadosSection() {
           <h2
             className="text-[#01050A] font-black uppercase mt-2"
             style={{
-              fontFamily: "Luxora Grotesk",
               fontSize: "26px",
               lineHeight: "38px",
               letterSpacing: "0.8px",

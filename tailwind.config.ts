@@ -6,13 +6,13 @@ const config: Config = withMT({
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
- theme: {
-  extend: {
-    fontFamily: {
-      luxora: ['"Luxora Grotesk"', 'sans-serif'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'], // <-- override default
+      },
     },
   },
-},
   plugins: [],
 });
 

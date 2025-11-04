@@ -18,7 +18,7 @@ export async function POST(req) {
     });
 
     const htmlContent = `
-      <div style="font-family: 'Luxora Grotesk', Arial, sans-serif; background-color: #f4f7f8; padding: 20px;">
+      <div style="background-color: #f4f7f8; padding: 20px;">
         <div style="max-width: 600px; margin: auto; background: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); padding: 20px;">
           <h2 style="color: #58A8AB; text-align: center;">Novo diagnóstico solicitado</h2>
           <p>Um cliente preencheu o formulário do site. Seguem os dados:</p>

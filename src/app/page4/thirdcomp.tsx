@@ -87,7 +87,6 @@ export default function DepartmentsSection() {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
         className="text-white font-extrabold text-lg md:text-xl leading-snug"
-        style={{ fontFamily: "Luxora Grotesk" }}
       >
         Inteligência Comercial é a capacidade de <br />
         <span className="font-extrabold">antecipar o mercado.</span>
@@ -99,7 +98,6 @@ export default function DepartmentsSection() {
         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
         className="mt-3 text-[#68788B] max-w-2xl text-sm md:text-base"
-        style={{ fontFamily: "Luxora Grotesk" }}
       >
         Nossa metodologia data-driven ajuda atacadistas, distribuidoras e indústrias
         a ler o cenário, prever demandas e estruturar processos e equipes para
@@ -113,7 +111,6 @@ export default function DepartmentsSection() {
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true }}
         className="text-white font-extrabold text-lg md:text-xl leading-snug mt-8"
-        style={{ fontFamily: "Luxora Grotesk" }}
       >
         Nossos projetos entregam uma transformação completa.
       </motion.h2>
@@ -145,7 +142,6 @@ export default function DepartmentsSection() {
             {/* Body */}
             <div
               className="flex-grow flex items-center justify-center bg-[#D9D9D9] px-4 py-3 text-[#323232] text-sm md:text-base text-center rounded-b-[20px]"
-              style={{ fontFamily: "Luxora Grotesk" }}
             >
               {description}
             </div>

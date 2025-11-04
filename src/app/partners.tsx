@@ -53,11 +53,11 @@ export default function AboutUs() {
       >
         {/* Left Text Section */}
       <motion.div
-        className="flex flex-col gap-4 text-white mt-4 font-[Luxora Grotesk]"
+        className="flex flex-col gap-4 text-white mt-4 "
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        style={{ fontFamily: '"Luxora Grotesk", sans-serif' }}
+        
       >
         <h2 className="uppercase font-extrabold max-w-md mt-12 ml-8 tracking-wider text-[1.8rem] md:text-[2rem] lg:text-[2rem] xl:text-[2.25rem] leading-tight">
           CONFIANÇA DE LÍDERES EM DIVERSOS SETORES

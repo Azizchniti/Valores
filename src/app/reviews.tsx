@@ -31,7 +31,7 @@ export default function VideoReviewsSection() {
       >
         <Image alt="Arrow" src="/image/icons/chat.png" width={35} height={35} />
         <span
-          className="text-center font-[Luxora Grotesk] font-bold uppercase"
+          className="text-center font-bold uppercase"
           style={{ fontSize: "28px", color: "#000409" }}
         >
           O que nossos parceiros dizem sobre nós
