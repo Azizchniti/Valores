@@ -22,7 +22,15 @@ export default function SolutionsInteractive({ solutions = [] }: Props) {
   const [expanded, setExpanded] = useState(false);
   const lerMaisRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null); // <-- ref for top of component
-
+  
+  useEffect(() => {
+  if (expanded && containerRef.current) {
+    containerRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}, [expanded]);
   
   const activeSolution = activeIndex !== null ? solutions[activeIndex] : null;
   if (!solutions.length) return null;
@@ -38,14 +46,7 @@ export default function SolutionsInteractive({ solutions = [] }: Props) {
     }
   };
 
-  useEffect(() => {
-  if (expanded && containerRef.current) {
-    containerRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-}, [expanded]);
+
 
   return (
     <div ref={containerRef} className="mt-14 flex flex-col items-center w-full">
