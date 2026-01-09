@@ -2,57 +2,85 @@
 
 import React from "react";
 import Image from "next/image";
-import { Typography } from "@material-tailwind/react";
 
 export default function AboutSection() {
   return (
-    <section className="relative py-20 px-8 overflow-hidden">
-      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-8 relative">
-        {/* Left side - Image */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-stretch">
-          <div className="relative w-full max-w-sm h-auto lg:h-full flex items-center">
-            <Image
-              src="/image/Foto_perfil.png"
-              alt="Business illustration"
-              fill
-              className=" object-cover"
-            />
-          </div>
-        </div>
+    <section className="relative bg-transparent md:-mt-10 z-10">
+      <div
+        className="
+          relative
+          max-w-[1600px]
+          mx-auto
+          overflow-hidden
+          rounded-t-[48px]
+        "
+        style={{
+          backgroundColor: "#4FB3B6",
+          backgroundImage: "url('/image/backgrounds/Grid.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "700px",
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <div className="relative max-w-7xl mx-auto px-10 py-12">
 
-        {/* Right side - Text with vertical bar */}
-        <div className="w-full lg:w-1/2 flex gap-4 items-center">
-          {/* Vertical bar */}
-          <div className="w-1 bg-blue-200 rounded-full self-stretch" />
-
-          {/* Text */}
-          <div className="flex flex-col items-start gap-6 max-w-sm">
-            <Typography
-              variant="h2"
-              className="text-xl lg:text-2xl font-bold leading-snug"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
-              <span style={{ color: "#58a8ab" }}>Descomplicamos a complexidade</span>{" "}
-              para empoderar negócios
-            </Typography>
-
-            <Typography className="text-base lg:text-lg text-gray-700 leading-relaxed text-justify" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-              A Valores é uma consultoria de gestão e tecnologia focada em médias e
-              grandes corporações. <br /> <br />
-              Com mais de 83 especialistas, atuamos em todo o território nacional e
-              em projetos internacionais para um único fim: construir empresas
-              sustentáveis, com equipes de alta performance e resultados
-              estratégicos. Acreditamos que o fundamental é ter Valores.
-            </Typography>
-
-            {/* Signature section */}
-            <div className="mt-2">
-              <Typography className="font-bold text-black text-base"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                EDSON ANDRADE
-              </Typography>
-              <Typography className="text-sm text-gray-500 font-light"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                Diretor Executivo
-              </Typography>
+          {/* IMAGE */}
+          <div className="absolute top-[-87%] right-[-20%] hidden md:block">
+            <div className="relative w-[110vw] max-w-[880px] aspect-[3/4]">
+              <Image
+                src="/image/Modelos.png"
+                alt="Equipe Valores"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
+
+          {/* TEXT */}
+          <div className="max-w-[480px] ml-16 flex flex-col">
+            <h1
+              className="
+                text-white
+                text-[20px] md:text-[38px] lg:text-[28px]
+                leading-[1.2]
+                tracking-wide
+                font-semibold
+                uppercase
+              "
+            >
+              <span className="text-black">
+                SIMPLIFICAMOS PROCESSOS
+              </span>
+              <br />
+              PARA IMPACTAR A EXPERIÊNCIA <br />
+              DO SEU CLIENTE E COLABORADOR
+            </h1>
+
+            <p className="mt-6 text-white text-[18px] leading-[1.45] text-justify">
+              A Valores é uma empresa de tecnologia e consultoria em
+              gestão empresarial focada em médias e grandes
+              corporações.
+            </p>
+
+            <p className="mt-4 text-white text-[18px] leading-[1.45] text-justify">
+              Com mais de <strong>83 especialistas</strong>, atuamos em todo o
+              território nacional e em projetos internacionais.
+              Construímos empresas sustentáveis, equipes de alta
+              performance e resultados estratégicos.{" "}
+              <strong>Valores que constroem legados.</strong>
+            </p>
+
+            <div className="mt-8">
+              <p className="text-white text-[14px] font-semibold">
+                Edson Andrade
+              </p>
+              <p className="text-white/70 text-[12px]">
+                Diretor Executivo
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ const navItems = [
   { id: 1, label: "Soluções", href: "#solucoes" },
   { id: 2, label: "Quem somos", href: "#quem-somos" },
   { id: 3, label: "Cases de Sucesso", href: "#cases" },
-  { id: 4, label: "Blog", href: "#blog" },
+  // { id: 4, label: "Blog", href: "#blog" },
   { id: 5, label: "Faça Seu Diagnóstico", href: "#trabalhe" },
 ];
 

@@ -1,29 +1,30 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
 
 export default function BusinessForm() {
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
+    telefone: "",
     empresa: "",
-    cargo: "",
-    whatsapp: "",
-    faturamento: "",
-    segmento: "",
-    quantidade: "",
+    servicos: "",
+    mensagem: "",
   });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<"success" | "error" | "">("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); // ⛔ prevents page refresh
     setLoading(true);
     setStatus("");
 
@@ -34,227 +35,135 @@ export default function BusinessForm() {
         body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
-        setStatus("✅ Enviado com sucesso!");
-        setFormData({
-          nome: "",
-          email: "",
-          empresa: "",
-          cargo: "",
-          whatsapp: "",
-          faturamento: "",
-          segmento: "",
-          quantidade: "",
-        });
-      } else {
-        setStatus("❌ Falha ao enviar. Tente novamente.");
-      }
-    } catch {
-      setStatus("⚠️ Erro de rede. Verifique sua conexão.");
-    }
+      if (!res.ok) throw new Error("Erro ao enviar");
 
-    setLoading(false);
+      setStatus("success");
+      setFormData({
+        nome: "",
+        email: "",
+        telefone: "",
+        empresa: "",
+        servicos: "",
+        mensagem: "",
+      });
+    } catch (err) {
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div
-      className="relative bg-cover bg-center bg-no-repeat py-12 px-6"
+     <section className="relative">
+         {/* 🔻 BOTTOM CONTINUATION (THIS IS THE KEY) */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-24 md:h-32"
+        style={{
+          backgroundColor: "#4FB3B6",
+          backgroundRepeat: "repeat",
+        }}
+      />
+    <div className="relative py-28 px-6 rounded-b-[92px]"
       style={{
-        backgroundImage: "url('/image/backgrounds/form-bg.svg')",
+        backgroundColor: "#000",
+        backgroundImage: "url('/image/backgrounds/Grid.png')",
+        backgroundRepeat: "repeat",
       }}
     >
-      <section className="flex flex-col lg:flex-row items-start justify-center gap-12 lg:gap-24">
-        {/* Left side - Text section */}
-    <div className="mt-16 flex flex-col items-start text-left px-4 lg:px-0 ml-6">
-  <h2
-    className="text-[#E3E3E3] font-semibold uppercase"
-    style={{
-      fontSize: "36px",
-      lineHeight: "48px",
-    }}
-  >
-    Chega de navegar em meio às tempestades do dia a dia.
-  </h2>
+      <div className="mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-8 items-start">
+        {/* LEFT TEXT */}
+        <div className="max-w-md lg:ml-24 mt-28">
+          <h1 className="text-[#5BC4C6] text-4xl font-semibold leading-tight uppercase">
+            Chega de navegar em meio às tempestades do dia a dia.
+          </h1>
 
-  <div className="mt-4 h-[7px] w-[230px] bg-[#58A8AB] rounded-full text-justify" />
+          <p className="mt-6 text-white text-lg leading-relaxed">
+            Nossa equipe de especialistas está pronta para mapear suas oportunidades
+            e apontar o caminho para a alta performance. Preencha o formulário e
+            agende um diagnóstico estratégico, sem compromisso.
+          </p>
+        </div>
 
-  <p
-    className="text-[#8B949E] font-light mt-4 mb-12 "
-    style={{
-      fontSize: "20px",
-      lineHeight: "1.6",
-      maxWidth: "520px", // increased width to allow more horizontal space
-    }}
-  >
-    Nossa equipe de especialistas está pronta para mapear suas oportunidades e apontar o caminho para a alta performance. 
-    Preencha o formulário e agende um diagnóstico estratégico, sem compromisso.
-  </p>
-</div>
-
-
-        {/* Right side - Form */}
-        <div className="relative z-10 w-full max-w-2xl rounded-2xl border border-[#58A8AB] bg-[rgba(27,34,42,0.9)] backdrop-blur-md p-6 shadow-lg ">
-          {/* Icon */}
-          <div className="flex justify-center mb-4">
-            <div
-              className="flex items-center justify-center rounded-lg p-2"
-              style={{
-                background: "#58A8AB",
-                boxShadow:
-                  "0 205px 57px 0 rgba(88, 168, 171, 0.00), 0 131px 52px 0 rgba(88, 168, 171, 0.04), 0 74px 44px 0 rgba(88, 168, 171, 0.14), 0 33px 33px 0 rgba(88, 168, 171, 0.21), 0 8px 18px 0 rgba(88, 168, 171, 0.25)",
-              }}
-            >
-              <Image
-                src="/image/icons/pencilicon.png"
-                alt="Pencil Icon"
-                width={15}
-                height={15}
-              />
-            </div>
-          </div>
-
-          <h2
-            className="text-center mb-3 font-semibold"
-            style={{
-              color: "#E3E3E3",
-              fontSize: "18px",
-            }}
-          >
-            Pronto para recalcular a rota do seu negócio?
+        {/* FORM CARD */}
+        <div className="bg-[#5BC4C6] rounded-[36px] px-10 py-10 max-w-md w-full">
+          <h2 className="text-white text-lg font-semibold uppercase mb-6">
+            Pronto para recalcular a rota do <b>seu negócio</b>?
           </h2>
 
-          <div className="w-[85%] h-[1px] bg-[#58A8AB] mx-auto mb-4"></div>
-
-          {/* Form */}
-          <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
-            {/* Nome */}
-            <div className="flex items-center gap-2 rounded-xl border border-black bg-[rgba(0,0,0,0.3)] px-3 py-2">
-              <Image src="/image/icons/nome.png" alt="Nome" width={18} height={18} />
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            {["nome", "email", "telefone", "empresa"].map((field) => (
               <input
-                type="text"
-                name="nome"
-                value={formData.nome}
+                key={field}
+                name={field}
+                value={formData[field as keyof typeof formData]}
                 onChange={handleChange}
-                placeholder="Nome"
-                className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
+                placeholder={
+                  field === "email"
+                    ? "E-mail"
+                    : field.charAt(0).toUpperCase() + field.slice(1)
+                }
+                required
+                className="bg-transparent border-b border-white/50 pb-2 text-white placeholder-white/70 outline-none"
               />
-            </div>
-
-            {/* Email + Empresa */}
-            <div className="flex flex-col md:flex-row gap-3">
-              {[
-                { name: "email", placeholder: "Seu melhor e-mail", icon: "email" },
-                { name: "empresa", placeholder: "Empresa", icon: "empresa" },
-              ].map((field) => (
-                <div
-                  key={field.name}
-                  className="flex items-center gap-2 rounded-xl border border-black bg-[rgba(0,0,0,0.3)] px-3 py-2 flex-1"
-                >
-                  <Image
-                    src={`/image/icons/${field.icon}.png`}
-                    alt={field.placeholder}
-                    width={18}
-                    height={18}
-                  />
-                  <input
-                    type="text"
-                    name={field.name}
-                    value={formData[field.name as keyof typeof formData]}
-                    onChange={handleChange}
-                    placeholder={field.placeholder}
-                    className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Cargo + Whatsapp */}
-            <div className="flex flex-col md:flex-row gap-3">
-              {[
-                { name: "cargo", placeholder: "Cargo", icon: "cargo" },
-                { name: "whatsapp", placeholder: "DDD + Whatsapp", icon: "whatsapp" },
-              ].map((field) => (
-                <div
-                  key={field.name}
-                  className="flex items-center gap-2 rounded-xl border border-black bg-[rgba(0,0,0,0.3)] px-3 py-2 flex-1"
-                >
-                  <Image
-                    src={`/image/icons/${field.icon}.png`}
-                    alt={field.placeholder}
-                    width={18}
-                    height={18}
-                  />
-                  <input
-                    type="text"
-                    name={field.name}
-                    value={formData[field.name as keyof typeof formData]}
-                    onChange={handleChange}
-                    placeholder={field.placeholder}
-                    className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Remaining fields */}
-            {[
-              {
-                name: "faturamento",
-                placeholder: "Qual é o faturamento médio de sua empresa?",
-                icon: "faturamento",
-              },
-              {
-                name: "segmento",
-                placeholder: "Qual é o segmento de atuação de sua empresa?",
-                icon: "segmento",
-              },
-              {
-                name: "quantidade",
-                placeholder: "Qual a quantidade de colaboradores de sua empresa?",
-                icon: "quantidade",
-              },
-            ].map((field) => (
-              <div
-                key={field.name}
-                className="flex items-center gap-2 rounded-xl border border-black bg-[rgba(0,0,0,0.3)] px-3 py-2"
-              >
-                <Image
-                  src={`/image/icons/${field.icon}.png`}
-                  alt={field.placeholder}
-                  width={18}
-                  height={18}
-                />
-                <input
-                  type="text"
-                  name={field.name}
-                  value={formData[field.name as keyof typeof formData]}
-                  onChange={handleChange}
-                  placeholder={field.placeholder}
-                  className="flex-1 bg-transparent outline-none text-sm text-white placeholder-gray-300 "
-                />
-              </div>
             ))}
 
-            {/* Button */}
+            {/* SERVICES */}
+            <select
+              name="servicos"
+              value={formData.servicos}
+              onChange={handleChange}
+              required
+              className="bg-transparent border-b border-white/50 pb-2 text-white outline-none"
+            >
+              <option value="" className="text-black">
+                Nossos serviços
+              </option>
+              <option className="text-black">Automação de Processos</option>
+              <option className="text-black">RH & Departamento Pessoal</option>
+              <option className="text-black">Comercial & Vendas</option>
+              <option className="text-black">Financeiro</option>
+              <option className="text-black">Marketing & Trade Marketing</option>
+            </select>
+
+            {/* MESSAGE */}
+            <textarea
+              name="mensagem"
+              value={formData.mensagem}
+              onChange={handleChange}
+              placeholder="Mensagem"
+              rows={3}
+              className="mt-4 rounded-md p-3 text-black outline-none resize-none"
+            />
+
+            {/* BUTTON */}
             <button
               type="submit"
               disabled={loading}
-              className="mt-3 w-full rounded-[36px] py-2 text-black  font-semibold text-sm 
-                        transform transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 disabled:opacity-60"
-              style={{
-                background:
-                  "linear-gradient(178deg, #56A6A9 1.38%, #254749 166.25%)",
-              }}
+              className="mt-6 mx-auto rounded-full bg-black px-8 py-3 text-sm font-semibold text-white transition hover:scale-105 disabled:opacity-60"
             >
-              {loading ? "Enviando..." : "AGENDAR DIAGNÓSTICO GRATUITO"}
+              {loading ? "ENVIANDO..." : "AGENDAR DIAGNÓSTICO "}
+              {!loading && (
+                <span className="text-[#5BC4C6]">GRATUITO!</span>
+              )}
             </button>
 
-            {status && (
-              <p className="text-center text-white mt-2 text-sm ">{status}</p>
+            {/* STATUS MESSAGE */}
+            {status === "success" && (
+              <div className="mt-4 rounded-lg bg-black/80 px-4 py-3 text-center text-sm text-[#5BC4C6]">
+                ✅ Mensagem enviada com sucesso!  
+                Nossa equipe entrará em contato em breve.
+              </div>
+            )}
+
+            {status === "error" && (
+              <div className="mt-4 rounded-lg bg-black/80 px-4 py-3 text-center text-sm text-red-400">
+                ❌ Erro ao enviar. Tente novamente.
+              </div>
             )}
           </form>
         </div>
-      </section>
-    </div>
+      </div>
+      </div> 
+    </section>
   );
 }

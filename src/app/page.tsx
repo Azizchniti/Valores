@@ -3,11 +3,11 @@ import { Navbar, Footer } from "@/components";
 
 // sections
 import Hero from "./hero";
-import OnlineCourse from "./solutions";
+import Solutions from "./solutions";
 import WhyChooseUs from "./reviews";
 import CarouselFeatures from "./contact";
-import BusinessCards from "./introduction";
-import AboutUs from "./partners";
+import Introduction from "./introduction";
+import Partners from "./partners";
 
 export default function Campaign() {
   return (
@@ -20,16 +20,16 @@ export default function Campaign() {
        
       >
        <section id="quem-somos" >
-      <BusinessCards />
+      <Introduction />
       </section>
 
       {/* Soluções */}
       <section id="solucoes">
-        <OnlineCourse />
+        <Solutions />
       </section>
       </div>
 
-      <AboutUs />
+      <Partners />
 
       {/* Cases de Sucesso */}
       <section id="cases"  className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
