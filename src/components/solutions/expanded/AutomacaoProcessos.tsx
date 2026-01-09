@@ -253,12 +253,26 @@ export default function AutomacaoProcessos() {
           {metodologiaSteps.map((step) => (
             <div key={step.number} className="flex flex-col gap-6">
               <div className="flex items-center gap-6">
-                <div
-                  className="w-[96px] h-[96px] rounded-full flex items-center justify-center text-white font-bold text-[48px]"
-                  style={{ backgroundColor: "#58C5CC" }}
-                >
-                  {step.number}
-                </div>
+               <div
+                className="
+                  w-[96px]
+                  h-[96px]
+                  rounded-full
+                  flex
+                  items-center
+                  justify-center
+                  flex-shrink-0
+                  text-white
+                  font-bold
+                  text-[48px]
+                  leading-none
+                  translate-y-[1px]
+                "
+                style={{ backgroundColor: "#58C5CC" }}
+              >
+                {step.number}
+              </div>
+
 
                 <h4 className="text-white font-bold text-[42px] leading-tight">
                   {step.title}
