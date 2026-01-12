@@ -113,9 +113,18 @@ export default function GovernancaCorporativa() {
                 duration-300
               "
             >
-              <div className="flex items-start gap-4">
-                <span className="mt-1 w-2 h-2 rounded-full bg-[#58C5CC]" />
-                <p>{item}</p>
+            <div className="flex gap-4">
+                <span
+                  className="
+                    w-2 h-2
+                    rounded-full
+                    bg-[#58C5CC]
+                    relative
+                    top-[0.6em]
+                    flex-shrink-0
+                  "
+                />
+                <p className="leading-relaxed">{item}</p>
               </div>
             </div>
           ))}

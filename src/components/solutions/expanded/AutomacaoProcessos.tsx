@@ -249,10 +249,10 @@ export default function AutomacaoProcessos() {
           ABORDAGEM METODOLÓGICA
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           {metodologiaSteps.map((step) => (
-            <div key={step.number} className="flex flex-col gap-6">
-              <div className="flex items-center gap-6">
+          <div key={step.number} className="flex flex-col gap-6 h-full">
+              <div className="flex items-start gap-6">
                <div
                 className="
                   w-[96px]
