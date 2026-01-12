@@ -158,7 +158,7 @@ export default function ResultadosSection() {
             style={{ fontSize: "28px", lineHeight: "40px" }}
           >
             Soluções integradas para uma <br />
-            <span className="text-[#58A8AB]">gestão à prova de futuro</span>
+            <span className="text-[#58A8AB]">gestão à prova de tempo</span>
           </h2>
         </div>
 
