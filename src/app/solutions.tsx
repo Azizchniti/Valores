@@ -80,7 +80,7 @@ export default function ResultadosSection() {
         {/* First Title */}
         <div className="text-center">
           <h2
-            className="text-[#01050A] font-extrabold uppercase mt-2"
+            className="text-[#01050A] font-regular uppercase mt-2"
             style={{ fontSize: "26px", lineHeight: "38px", letterSpacing: "0.8px" }}
           >
             RESULTADOS QUE REDEFINEM O
@@ -104,10 +104,15 @@ export default function ResultadosSection() {
                 viewport={{ once: false, amount: 0.5 }}
                 transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
               >
-                <h3
-                  className="font-bold uppercase leading-none text-center"
-                  style={{ fontSize: "34px", letterSpacing: "0.6px", color: KPI_COLOR }}
+               <h3
+                  className="uppercase leading-none text-center font-regular"
+                  style={{
+                    fontSize: "34px",
+                    letterSpacing: "0.6px",
+                    color: KPI_COLOR,
+                  }}
                 >
+
                   {i < 3 ? (
                     <span>
                       {isPlus && <span style={{ color: ACCENT_COLOR, marginRight: "2px" }}>+</span>}
@@ -154,7 +159,7 @@ export default function ResultadosSection() {
         {/* Second Title */}
         <div className="mt-16 text-center">
           <h2
-            className="text-[#01050A] font-extrabold uppercase"
+            className="text-[#01050A] font-regular uppercase"
             style={{ fontSize: "28px", lineHeight: "40px" }}
           >
             Soluções integradas para uma <br />

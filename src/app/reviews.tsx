@@ -38,9 +38,7 @@ export default function VideoReviewsSection() {
       <div
         className="absolute inset-x-0 bottom-0 h-24 md:h-32"
         style={{
-          backgroundColor: "#000",
-          backgroundImage: "url('/image/backgrounds/Grid.png')",
-          backgroundRepeat: "repeat",
+          backgroundColor: "#ffffff",
         }}
       />
 
@@ -49,7 +47,7 @@ export default function VideoReviewsSection() {
         className="relative z-10 w-full py-20 rounded-b-[92px] overflow-hidden"
         style={{
           backgroundColor: "#9ECFD0",
-          backgroundImage: "url('/image/backgrounds/Grid.png')",
+          backgroundImage: "url('/image/backgrounds/Grid_dark.png')",
           backgroundRepeat: "repeat",
           backgroundSize: "700px",
         }}

@@ -13,6 +13,7 @@ export default function AboutSection() {
           mx-auto
           overflow-hidden
           rounded-t-[48px]
+
         "
         style={{
           backgroundColor: "#4FB3B6",
@@ -22,10 +23,10 @@ export default function AboutSection() {
           backgroundBlendMode: "overlay",
         }}
       >
-        <div className="relative max-w-7xl mx-auto px-10 py-12">
+        <div className="relative max-w-7xl mx-auto px-10 py-12 mt-12">
 
           {/* IMAGE */}
-          <div className="absolute top-[-87%] right-[-20%] hidden md:block">
+          <div className="absolute top-[-110%] right-[-20%] hidden md:block">
             <div className="relative w-[110vw] max-w-[880px] aspect-[3/4]">
               <Image
                 src="/image/Modelos.png"

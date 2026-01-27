@@ -21,15 +21,15 @@ export default function Partners() {
       {/* LEFT COLUMN */}
       <div className="flex flex-col justify-between text-white ml-24">
         <div className="flex flex-col gap-4 max-w-md">
-          <h2 className="uppercase font-extrabold tracking-wider text-[1.8rem] md:text-[2rem] xl:text-[2.25rem] leading-tight">
+          <h2 className="uppercase font-regular tracking-wider text-[1.8rem] md:text-[2rem] xl:text-[2.25rem] leading-tight">
             <span style={{ color: "#58A8AB" }}>CONFIANÇA</span> DE LÍDERES EM DIVERSOS SETORES
           </h2>
 
-          <p className="text-[#A7B6C5] font-light text-justify text-[1rem] md:text-[1.125rem] xl:text-[1.25rem] leading-relaxed">
+          <p className="text-[#A7B6C5] font-regular text-justify text-[1rem] md:text-[1.125rem] xl:text-[1.25rem] leading-relaxed">
             Nossa expertise transcende setores. Navegamos com a mesma desenvoltura pelo agronegócio, indústria, educação e varejo.
           </p>
 
-          <p className="text-[#A7B6C5] font-light text-justify text-[1rem] md:text-[1.125rem] xl:text-[1.25rem] leading-relaxed">
+          <p className="text-[#A7B6C5] font-regular text-justify text-[1rem] md:text-[1.125rem] xl:text-[1.25rem] leading-relaxed">
             Por quê? Porque a gestão de alta performance não depende do segmento, mas da coragem de recalcular a rota.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Partners() {
             <Image alt="WhatsApp" src="/image/icons/WhatsApp2.png" width={20} height={20} />
           </div>
           <span className="text-[#FFFFFF] text-base md:text-lg">
-            SOLICITAR DIAGNÓSTICO <span className="font-extrabold">GRATUITO!</span>
+            SOLICITAR DIAGNÓSTICO <span className="font-regular">GRATUITO!</span>
           </span>
         </button>
       </div>

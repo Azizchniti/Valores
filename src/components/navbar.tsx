@@ -15,7 +15,7 @@ const navItems = [
   { id: 1, label: "Soluções", href: "#solucoes" },
   { id: 2, label: "Quem somos", href: "#quem-somos" },
   { id: 3, label: "Cases de Sucesso", href: "#cases" },
-  // { id: 4, label: "Blog", href: "#blog" },
+   { id: 4, label: "Blog", href: "#blog" },
   { id: 5, label: "Faça Seu Diagnóstico", href: "#trabalhe" },
 ];
 
@@ -46,7 +46,7 @@ export function Navbar() {
       blurred={false}
       className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50
                   transition-all duration-300
-                  bg-[#000408] text-white 
+                  bg-[#335869] text-white 
                   ${isScrolling ? "bg-opacity-70 backdrop-blur-sm" : "bg-opacity-100"}
                   w-[90%] lg:w-[75%]`} placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}    >
       <div className="flex items-center justify-between px-6 lg:px-12 py-0">
@@ -69,28 +69,35 @@ export function Navbar() {
 
         {/* Desktop menu */}
         <div className="hidden lg:flex items-center gap-5 font-semibold text-sm">
-          <ul className="flex gap-5 items-center">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={item.href}
-                  className="transition hover:text-[#58a8ab]"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+         <ul className="flex gap-5 items-center">
+              {navItems.map((item) => {
+                const isCTA = item.label === "Faça Seu Diagnóstico";
 
-          {/* WhatsApp Icon */}
-          <Link
-            href="https://wa.me/5538991136197"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 text-[#25D366] hover:text-[#1ebe5d] transition-colors"
-          >
-            <i className="fa-brands fa-whatsapp text-xl" />
-          </Link>
+                return (
+                  <li key={item.id}>
+                    <a
+                      href={item.href}
+                      className={
+                        isCTA
+                          ? `
+                            flex items-center gap-2
+                            px-5 py-2
+                            rounded-xl
+                            bg-gradient-to-r from-[#58a8ab] to-[#6fc6c9]
+                            text-white font-semibold
+                            shadow-md
+                            hover:opacity-90 transition
+                          `
+                          : "transition hover:text-[#58a8ab]"
+                      }
+                    >
+                      {isCTA && <i className="fa-brands fa-whatsapp text-lg" />}
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
         </div>
 
         {/* Mobile toggle */}
