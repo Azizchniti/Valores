@@ -107,23 +107,41 @@ export default function BusinessForm() {
               />
             ))}
 
-            {/* SERVICES */}
-            <select
-              name="servicos"
-              value={formData.servicos}
-              onChange={handleChange}
-              required
-              className="bg-transparent border-b border-white/50 pb-2 text-white outline-none"
-            >
-              <option value="" className="text-black">
-                Nossos serviços
-              </option>
-              <option className="text-black">Automação de Processos</option>
-              <option className="text-black">RH & Departamento Pessoal</option>
-              <option className="text-black">Comercial & Vendas</option>
-              <option className="text-black">Financeiro</option>
-              <option className="text-black">Marketing & Trade Marketing</option>
-            </select>
+           <div className="relative">
+              <select
+                name="servicos"
+                value={formData.servicos}
+                onChange={handleChange}
+                required
+                className="
+                  w-full
+                  appearance-none
+                  bg-transparent
+                  border-b-2 border-white/40
+                  py-3 pr-10
+                  text-white
+                  outline-none
+                  transition
+                  focus:border-white
+                  hover:border-white/70
+                "
+              >
+                <option value="" disabled className="text-black">
+                  Nossos serviços
+                </option>
+                <option className="text-black">Automação de Processos</option>
+                <option className="text-black">RH & Departamento Pessoal</option>
+                <option className="text-black">Comercial & Vendas</option>
+                <option className="text-black">Financeiro</option>
+                <option className="text-black">Marketing & Trade Marketing</option>
+              </select>
+
+              {/* Custom arrow */}
+              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-white/70">
+                ▼
+              </span>
+            </div>
+
 
             {/* MESSAGE */}
             <textarea

@@ -38,21 +38,15 @@ export default function Posts() {
       <div className="relative z-10 bg-white rounded-b-[92px] px-6 py-28 overflow-hidden">
         <div className="max-w-[1200px] mx-auto text-center">
 
-          {/* BADGE */}
-          <span className="inline-block mb-4 px-4 py-1 rounded-full bg-[#E6F6F7] text-[#58A8AB] text-sm font-semibold">
-            Blog & Conteúdo
-          </span>
 
-          <h2 className="font-extrabold text-[2.2rem] md:text-[2.5rem] text-[#0F172A] mb-3">
-            Confira nosso blog
-          </h2>
+            {/* Title */}
+            <h2 className="text-center font-normal text-[2.2rem] md:text-[2.6rem] text-[#0F172A] mb-12">
+              CONFIRA NOSSO <span className="text-[#58A8AB] font-normal">BLOG</span>
+            </h2>
 
-          <p className="max-w-xl mx-auto text-[#64748B] mb-16 text-base md:text-lg">
-            Insights, estratégias e conteúdos recentes da nossa equipe
-          </p>
 
           {loading ? (
-            <p className="text-[#94A3B8]">Carregando posts...</p>
+            <p className="text-[#94A3B8] font-normal">Carregando posts...</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {posts.map(post => (
@@ -84,10 +78,10 @@ export default function Posts() {
                   </div>
 
                   <div className="flex items-center justify-between px-5 py-4 bg-gradient-to-r from-[#F8FBFF] to-white">
-                    <span className="text-sm font-semibold text-[#58A8AB]">
+                    <span className="text-sm font-regular text-[#58A8AB]">
                       Instagram
                     </span>
-                    <span className="text-sm font-semibold text-[#0F172A]">
+                    <span className="text-sm font-regular text-[#0F172A]">
                       Ver post →
                     </span>
                   </div>

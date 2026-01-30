@@ -12,16 +12,39 @@ html, body {
 }
 
 
-
 /* ===========================
-   Nexa Font Family
+   Nexa Font Family (FULL)
    =========================== */
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa/Nexa-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa/Nexa-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
 
 @font-face {
   font-family: "Nexa";
   src: url("/fonts/Nexa/Nexa-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa/Nexa-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -37,6 +60,22 @@ html, body {
   font-family: "Nexa";
   src: url("/fonts/Nexa/Nexa-Italic.ttf") format("truetype");
   font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa/Nexa-Book.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa/Nexa-BookItalic.otf") format("opentype");
+  font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
@@ -60,7 +99,7 @@ html, body {
 @font-face {
   font-family: "Nexa";
   src: url("/fonts/Nexa/Nexa-Black.ttf") format("truetype");
-  font-weight: 900;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -68,6 +107,22 @@ html, body {
 @font-face {
   font-family: "Nexa";
   src: url("/fonts/Nexa/Nexa-BlackItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa/Nexa-XBold.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa/Nexa-XBoldItalic.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;

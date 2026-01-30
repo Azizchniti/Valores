@@ -56,7 +56,7 @@ export default function VideoReviewsSection() {
       {/* CONTENT */}
       <div className="relative z-10 py-20">
         {/* Title */}
-        <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#0B1E23] mb-16">
+        <h2 className="text-center text-3xl md:text-4xl font-regular text-[#0B1E23] mb-16">
           O QUE NOSSOS <span className="text-white">PARCEIROS</span>
           <br />
           DIZEM SOBRE NÓS
