@@ -64,7 +64,7 @@ export default function VideoReviewsSection() {
 
         {/* Main Content */}
         <div className="flex justify-center px-6">
-          <div className="relative flex items-center w-full max-w-[1600px]">
+          <div className="relative flex flex-col lg:flex-row items-center w-full max-w-[1600px] gap-10 lg:gap-0">
             <div className="hidden lg:block w-[250px]" />
 
             <AnimatePresence mode="wait">
