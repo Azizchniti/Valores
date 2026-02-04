@@ -19,9 +19,28 @@ export default function Partners() {
     <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
       
       {/* LEFT COLUMN */}
-      <div className="flex flex-col justify-between text-white ml-24">
-        <div className="flex flex-col gap-4 max-w-md">
-          <h2 className="uppercase font-regular tracking-wider text-[1.8rem] md:text-[2rem] xl:text-[2.25rem] leading-tight">
+      <div className="
+            flex
+            flex-col
+            justify-between
+            text-white
+            ml-0 lg:ml-24
+          ">
+        <div className="
+            flex
+            flex-col
+            gap-4
+            max-w-md
+            mx-auto lg:mx-0
+          ">
+         <h2 className="
+              uppercase
+              font-regular
+              tracking-wide
+              text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] xl:text-[2.25rem]
+              leading-tight
+              text-center lg:text-left
+            ">
             <span style={{ color: "#58A8AB" }}>CONFIANÇA</span> DE LÍDERES EM DIVERSOS SETORES
           </h2>
 

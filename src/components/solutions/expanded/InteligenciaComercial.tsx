@@ -89,7 +89,15 @@ export default function InteligenciaComercial() {
   return (
     <div className="relative z-10 px-12 pb-20 mt-14">
       {/* SECTION TITLE */}
-       <h3 className="text-white text-center text-4xl font-bold mb-14 leading-tight">
+      <h3 className="
+            text-white
+            text-center
+            text-[26px] sm:text-[32px] lg:text-[38px]
+            font-bold
+            leading-[1.2]
+            tracking-tight
+            mb-14
+          ">
         PRINCIPAIS DESAFIOS DAS EMPRESAS
         <br />
         ATACADISTAS E DISTRIBUIDORAS
@@ -112,7 +120,12 @@ export default function InteligenciaComercial() {
             </div>
 
             {/* TITLE */}
-            <h4 className="text-white font-semibold text-lg leading-tight">
+           <h4 className="
+                text-white
+                font-semibold
+                text-base
+                leading-snug
+              ">
               {challenge.title}
             </h4>
 
@@ -124,7 +137,16 @@ export default function InteligenciaComercial() {
         ))}
      
       </div>
-          <h3 className="text-white text-center text-4xl font-bold mb-14 leading-tight mt-16">
+         <h3 className="
+            text-white
+            text-center
+            text-[24px] sm:text-[30px] lg:text-[36px]
+            font-bold
+            leading-tight
+            tracking-tight
+            mt-16
+            mb-14
+          ">
         ALGUMAS DAS ENTREGAS MAIS RELEVANTES
       </h3>
       {/* ENTREGAS GRID */}

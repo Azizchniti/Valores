@@ -55,7 +55,7 @@ export default function ResultadosSection() {
       <div
         className="absolute inset-x-0 top-0 h-24 md:h-32"
         style={{
-          backgroundColor: "#4FB3B6", // same as Introduction
+          backgroundColor: "#4FB3B6",
           backgroundImage: "url('/image/backgrounds/Grid.png')",
           backgroundRepeat: "repeat",
           backgroundSize: "700px",
@@ -66,23 +66,18 @@ export default function ResultadosSection() {
       <div
         className="absolute inset-x-0 bottom-0 h-24 md:h-32"
         style={{
-          backgroundColor: "#000000", // same as AboutUs
+          backgroundColor: "#000000",
         }}
       />
 
       {/* MAIN CONTAINER / CARD */}
       <div
-        className="relative z-10 rounded-t-[92px] rounded-b-[92px] py-16 px-6 md:py-20 md:px-10 mx-auto max-w-[1600px]"
-        style={{
-          backgroundColor: "#E0E0E0", // gray card
-        }}
+        className="relative z-10 rounded-t-[92px] rounded-b-[92px] py-12 px-4 md:py-20 md:px-10 mx-auto max-w-[1600px]"
+        style={{ backgroundColor: "#E0E0E0" }}
       >
         {/* First Title */}
         <div className="text-center">
-          <h2
-            className="text-[#01050A] font-regular uppercase mt-2"
-            style={{ fontSize: "26px", lineHeight: "38px", letterSpacing: "0.8px" }}
-          >
+          <h2 className="text-[#01050A] font-regular uppercase mt-2 text-lg md:text-[26px] leading-7 md:leading-[38px] tracking-wide">
             RESULTADOS QUE REDEFINEM O
             <br />
             <span className="text-[#58A8AB]"> SEU NEGÓCIO</span>
@@ -90,7 +85,7 @@ export default function ResultadosSection() {
         </div>
 
         {/* KPI Section */}
-        <div className="mt-10 flex flex-wrap justify-center gap-x-2 gap-y-2">
+        <div className="mt-10 flex flex-wrap justify-center gap-4 md:gap-x-2 md:gap-y-2">
           {KPIS.map(({ value, subtitle }, i) => {
             const numericValue = parseFloat(value.replace(/[^0-9.]/g, ""));
             const isPlus = value.includes("+");
@@ -98,24 +93,18 @@ export default function ResultadosSection() {
             return (
               <motion.div
                 key={i}
-                className="flex flex-col items-center w-[240px] md:w-[280px]"
+                className="flex flex-col items-center w-full sm:w-[200px] md:w-[280px] px-2"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.5 }}
                 transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
               >
-               <h3
-                  className="uppercase leading-none text-center font-regular"
-                  style={{
-                    fontSize: "34px",
-                    letterSpacing: "0.6px",
-                    color: KPI_COLOR,
-                  }}
-                >
-
+                <h3 className="uppercase leading-none text-center font-regular text-2xl sm:text-3xl md:text-[34px] tracking-tight">
                   {i < 3 ? (
                     <span>
-                      {isPlus && <span style={{ color: ACCENT_COLOR, marginRight: "2px" }}>+</span>}
+                      {isPlus && (
+                        <span style={{ color: ACCENT_COLOR, marginRight: "2px" }}>+</span>
+                      )}
                       <span style={{ color: KPI_COLOR }}>
                         <CountUp
                           start={0}
@@ -134,9 +123,9 @@ export default function ResultadosSection() {
                       <span
                         style={{
                           color: ACCENT_COLOR,
-                          fontSize: "28px",
+                          fontSize: "20px",
                           fontWeight: 600,
-                          marginLeft: "6px",
+                          marginLeft: "4px",
                           textTransform: "lowercase",
                         }}
                       >
@@ -145,10 +134,7 @@ export default function ResultadosSection() {
                     </span>
                   )}
                 </h3>
-                <p
-                  className="text-[#000] font-normal m-0 mt-2 text-center max-w-[160px]"
-                  style={{ fontSize: "15px", lineHeight: "18px" }}
-                >
+                <p className="text-center text-sm md:text-[15px] mt-2 max-w-[140px] md:max-w-[160px]">
                   {subtitle}
                 </p>
               </motion.div>
@@ -158,10 +144,7 @@ export default function ResultadosSection() {
 
         {/* Second Title */}
         <div className="mt-16 text-center">
-          <h2
-            className="text-[#01050A] font-regular uppercase"
-            style={{ fontSize: "28px", lineHeight: "40px" }}
-          >
+          <h2 className="text-[#01050A] font-regular uppercase text-lg sm:text-xl md:text-[28px] leading-7 sm:leading-8 md:leading-[40px]">
             Soluções integradas para uma <br />
             <span className="text-[#58A8AB]">gestão à prova de tempo</span>
           </h2>

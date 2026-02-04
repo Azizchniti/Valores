@@ -243,51 +243,53 @@ export default function AutomacaoProcessos() {
         ))}
       </div>
 
-      {/* METODOLOGIA */}
-      <div className="relative z-10 px-12 pb-16 mt-14">
-        <h3 className="text-white text-center text-3xl font-bold mb-14">
-          ABORDAGEM METODOLÓGICA
-        </h3>
+     {/* METODOLOGIA */}
+<div className="relative z-10 px-6 sm:px-12 pb-16 mt-14">
+  <h3 className="text-white text-center text-2xl sm:text-3xl font-bold mb-10 sm:mb-14">
+    ABORDAGEM METODOLÓGICA
+  </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {metodologiaSteps.map((step) => (
-          <div key={step.number} className="flex flex-col gap-6 h-full">
-              <div className="flex items-start gap-6">
-               <div
-                className="
-                  w-[96px]
-                  h-[96px]
-                  rounded-full
-                  flex
-                  items-center
-                  justify-center
-                  flex-shrink-0
-                  text-white
-                  font-bold
-                  text-[48px]
-                  leading-none
-                  translate-y-[1px]
-                "
-                style={{ backgroundColor: "#58C5CC" }}
-              >
-                {step.number}
-              </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+    {metodologiaSteps.map((step) => (
+      <div key={step.number} className="flex flex-col gap-6 h-full">
+        <div className="flex flex-col sm:flex-row sm:items-start items-center gap-4 sm:gap-6">
+          {/* Number Circle */}
+          <div
+            className="
+              w-[64px] sm:w-[96px]
+              h-[64px] sm:h-[96px]
+              rounded-full
+              flex
+              items-center
+              justify-center
+              flex-shrink-0
+              text-white
+              font-bold
+              text-[32px] sm:text-[48px]
+              leading-none
+              translate-y-[1px]
+            "
+            style={{ backgroundColor: "#58C5CC" }}
+          >
+            {step.number}
+          </div>
 
-
-                <h4 className="text-white font-bold text-[42px] leading-tight">
-                  {step.title}
-                </h4>
-              </div>
-
-              <ul className="list-disc list-inside space-y-3 text-white/90 text-[16px]">
-                {step.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Step Title */}
+          <h4 className="text-white font-bold text-[24px] sm:text-[42px] leading-tight text-center sm:text-left">
+            {step.title}
+          </h4>
         </div>
+
+        {/* Step Items */}
+        <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-white/90 text-[14px] sm:text-[16px]">
+          {step.items.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ul>
       </div>
+    ))}
+  </div>
+</div>
     </>
   );
-}
+} 

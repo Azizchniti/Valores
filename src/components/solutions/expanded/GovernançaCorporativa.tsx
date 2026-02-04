@@ -30,11 +30,26 @@ export default function GovernancaCorporativa() {
       
       {/* HEADER */}
       <div className="max-w-5xl mx-auto text-center mb-20">
-        <h2 className="text-white text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        <h2 className="
+          text-white
+          text-[32px] sm:text-[40px] lg:text-[48px]
+          font-bold
+          leading-[1.15]
+          tracking-tight
+          mb-6
+        ">
           GOVERNANÇA CORPORATIVA
         </h2>
 
-        <p className="text-[#9EDFE1] text-lg font-semibold tracking-wide uppercase mb-6">
+       <p className="
+            text-[#9EDFE1]
+            text-sm sm:text-base
+            font-semibold
+            tracking-[0.25em]
+            uppercase
+            mb-6
+          ">
+
           Planejamento • Processos • Projetos • Pessoas
         </p>
 
@@ -67,7 +82,12 @@ export default function GovernancaCorporativa() {
 
         {/* VISUAL CARD */}
         <div className="relative bg-[#003C4D] rounded-3xl p-10 shadow-xl border border-white/10">
-          <h3 className="text-white text-2xl font-bold mb-4">
+          <h3 className="
+              text-white
+              text-lg sm:text-xl
+              font-semibold
+              mb-4
+            ">
             Proposta de Valor
           </h3>
 
@@ -90,7 +110,15 @@ export default function GovernancaCorporativa() {
 
       {/* DELIVERIES */}
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-white text-center text-3xl lg:text-4xl font-bold mb-16">
+        <h3 className="
+            text-white
+            text-center
+            text-[26px] sm:text-[32px] lg:text-[36px]
+            font-bold
+            leading-tight
+            mb-14
+          ">
+
           Algumas das Entregas Mais Relevantes
         </h3>
 

@@ -60,7 +60,7 @@ export function Footer() {
             </a>
           </div>
           <Typography className="text-xs md:text-sm text-white font-semibold"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-            nossos@valores.com.br
+            nossos@valoressolucoes.com.br
           </Typography>
 
           <Typography className="text-xs md:text-sm text-white font-semibold" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
