@@ -16,7 +16,12 @@ const navItems = [
   { id: 2, label: "Quem somos", href: "#quem-somos" },
   { id: 3, label: "Cases de Sucesso", href: "#cases" },
    { id: 4, label: "Blog", href: "#blog" },
-  { id: 5, label: "Faça Seu Diagnóstico", href: "#trabalhe" },
+  {
+    id: 5,
+    label: "FALAR COM ESPECIALISTA",
+    href: "https://wa.me/553187954089",
+    external: true,
+  },
 ];
 
 export function Navbar() {
@@ -71,12 +76,14 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-5 font-semibold text-sm">
          <ul className="flex gap-5 items-center">
               {navItems.map((item) => {
-                const isCTA = item.label === "Faça Seu Diagnóstico";
+                const isCTA = item.label === "FALAR COM ESPECIALISTA";
 
                 return (
                   <li key={item.id}>
-                    <a
-                      href={item.href}
+                  <a
+                    href={item.href}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
                       className={
                         isCTA
                           ? `
@@ -120,8 +127,10 @@ export function Navbar() {
           <ul className="flex flex-col gap-2 text-gray-900 font-semibold text-sm">
             {navItems.map((item) => (
               <li key={item.id}>
-                <a
-                  href={item.href}
+               <a
+                    href={item.href}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
                   className="block transition hover:text-[#58a8ab]"
                 >
                   {item.label}

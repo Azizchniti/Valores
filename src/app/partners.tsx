@@ -54,17 +54,17 @@ export default function Partners() {
         </div>
 
         <button
-          onClick={() => {
-            const target = document.getElementById("trabalhe");
-            if (target) target.scrollIntoView({ behavior: "smooth" });
+         onClick={() => {
+            window.open("https://wa.me/553187954089", "_blank", "noopener,noreferrer");
           }}
-          className="flex items-center gap-3 px-5 py-2 bg-[#58a8ab] rounded-full shadow-[0px_6px_16px_#58a8ab57,0px_20px_20px_#58a8ab4c] hover:bg-[#4a9699] transition max-w-md mt-8"
+
+          className="flex items-center gap-3 px-5 py-2 bg-[#58a8ab] rounded-full hover:bg-[#4a9699] transition max-w-md mt-8"
         >
           <div className="flex w-7 h-7 items-center justify-center bg-[#fafdff] rounded-full">
             <Image alt="WhatsApp" src="/image/icons/whatsapp2.png" width={20} height={20} />
           </div>
           <span className="text-[#FFFFFF] text-base md:text-lg">
-            SOLICITAR DIAGNÓSTICO <span className="font-regular">GRATUITO!</span>
+           FALAR COM <span className="font-regular">ESPECIALISTA</span>
           </span>
         </button>
       </div>
