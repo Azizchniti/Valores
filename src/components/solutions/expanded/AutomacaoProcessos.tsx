@@ -216,32 +216,56 @@ const metodologiaSteps = [
 export default function AutomacaoProcessos() {
   return (
     <>
-      {/* SERVICES GRID */}
-      <div className="relative z-10 px-12 pb-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {containerData.map((container, idx) => (
-          <div
-            key={idx}
-            className="bg-[#003C4D] rounded-3xl p-6 flex flex-col items-center gap-4 max-w-[320px] w-full mx-auto"
+     {/* SERVICES GRID */}
+<div className="
+  relative z-10
+  px-3 sm:px-12
+  pb-12
+  grid
+  grid-cols-1
+  xs:grid-cols-2
+  sm:grid-cols-3
+  gap-4 sm:gap-6
+">
+  {containerData.map((container, idx) => (
+    <div
+      key={idx}
+      className="
+        bg-[#003C4D]
+        rounded-3xl
+        p-4 sm:p-6
+        flex flex-col items-center gap-4
+        w-full
+        max-w-none sm:max-w-[320px]
+        mx-auto
+      "
+    >
+      <FiUser size={34} className="text-white" />
+
+      <h5 className="text-[#59A8AD] font-semibold text-center">
+        {container.title}
+      </h5>
+
+      <ul className="w-full flex flex-col gap-2">
+        {container.services.map((service, sidx) => (
+          <li
+            key={sidx}
+            className="flex items-start gap-3"
           >
-            <FiUser size={34} className="text-white" />
+            <div className="w-10 h-5 bg-[#59A8AD] rounded-full relative flex-shrink-0">
+              <div className="w-3 h-3 bg-[#003C4D] rounded-full absolute right-1 top-1" />
+            </div>
 
-            <h5 className="text-[#59A8AD] font-semibold text-center">
-              {container.title}
-            </h5>
-
-            <ul className="w-full flex flex-col gap-2">
-              {container.services.map((service, sidx) => (
-                <li key={sidx} className="flex items-center gap-3">
-                  <div className="w-10 h-5 bg-[#59A8AD] rounded-full relative flex-shrink-0">
-                    <div className="w-3 h-3 bg-[#003C4D] rounded-full absolute right-1 top-1" />
-                  </div>
-                  <span className="text-white text-sm">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <span className="text-white text-[13px] sm:text-sm flex-1">
+              {service}
+            </span>
+          </li>
         ))}
-      </div>
+      </ul>
+    </div>
+  ))}
+</div>
+
 
      {/* METODOLOGIA */}
 <div className="relative z-10 px-6 sm:px-12 pb-16 mt-14">
