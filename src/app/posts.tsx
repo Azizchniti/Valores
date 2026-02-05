@@ -41,7 +41,7 @@ export default function Posts() {
 
             {/* Title */}
             <h2 className="text-center font-normal text-[2.2rem] md:text-[2.6rem] text-[#0F172A] mb-12">
-              ÚLTIMAS<span className="text-[#58A8AB] font-normal">ATUALIZAÇÕES</span>
+              ÚLTIMAS <span className="text-[#58A8AB] font-normal">ATUALIZAÇÕES</span>
             </h2>
 
 
