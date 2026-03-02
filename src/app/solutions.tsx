@@ -72,7 +72,7 @@ export default function ResultadosSection() {
 
       {/* MAIN CONTAINER / CARD */}
       <div
-        className="relative z-10 rounded-t-[92px] rounded-b-[92px] py-12 px-4 md:py-20 md:px-10 mx-auto max-w-[1600px]"
+        className="relative z-10 rounded-t-[92px] rounded-b-[92px] py-12 px-4 md:py-20 md:px-10 w-full"
         style={{ backgroundColor: "#E0E0E0" }}
       >
         {/* First Title */}

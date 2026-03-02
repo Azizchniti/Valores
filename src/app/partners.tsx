@@ -14,20 +14,20 @@ export default function Partners() {
   return (
     <section className="relative">
       {/* MAIN PART */}
-      <div className="relative z-10 py-24 px-6 overflow-hidden rounded-b-[92px] bg-[#000000]">
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+      <div className="relative z-10 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden rounded-b-[40px] sm:rounded-b-[60px] md:rounded-b-[92px] bg-[#000000]">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-stretch">
           {/* LEFT COLUMN */}
           <div className="flex flex-col justify-between text-white ml-0 lg:ml-24">
-            <div className="flex flex-col gap-4 max-w-md mx-auto lg:mx-0">
-              <h2 className="uppercase font-regular tracking-wide text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] xl:text-[2.25rem] leading-tight text-center lg:text-left">
+            <div className="flex flex-col gap-3 sm:gap-4 max-w-full lg:max-w-md mx-auto lg:mx-0">
+              <h2 className="uppercase font-regular tracking-wide text-2xl sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.25rem] leading-tight text-center lg:text-left">
                 <span style={{ color: "#58A8AB" }}>CONFIANÇA</span> DE LÍDERES EM DIVERSOS SETORES
               </h2>
 
-              <p className="text-[#A7B6C5] font-regular text-justify text-[1rem] md:text-[1.125rem] xl:text-[1.25rem] leading-relaxed">
+              <p className="text-[#A7B6C5] font-regular text-center lg:text-left text-[0.9rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] leading-relaxed">
                 Nossa expertise transcende setores. Navegamos com a mesma desenvoltura pelo agronegócio, indústria, educação e varejo.
               </p>
 
-              <p className="text-[#A7B6C5] font-regular text-justify text-[1rem] md:text-[1.125rem] xl:text-[1.25rem] leading-relaxed">
+              <p className="text-[#A7B6C5] font-regular text-center lg:text-left text-[0.9rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] leading-relaxed">
                 Por quê? Porque a gestão de alta performance não depende do segmento, mas da coragem de recalcular a rota.
               </p>
             </div>
@@ -37,25 +37,25 @@ export default function Partners() {
               href="https://wa.me/553187954089"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-5 py-2 bg-[#58a8ab] rounded-full hover:bg-[#4a9699] transition max-w-md mt-8"
+              className="flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 bg-[#58a8ab] rounded-full hover:bg-[#4a9699] transition max-w-full lg:max-w-md mt-6 sm:mt-8 lg:mt-8 mx-auto lg:mx-0"
             >
-              <div className="flex w-7 h-7 items-center justify-center bg-[#fafdff] rounded-full">
-                <Image alt="WhatsApp" src="/image/icons/whatsapp2.png" width={20} height={20} />
+              <div className="flex w-6 h-6 sm:w-7 sm:h-7 items-center justify-center bg-[#fafdff] rounded-full">
+                <Image alt="WhatsApp" src="/image/icons/whatsapp2.png" width={16} height={16} className="sm:w-5 sm:h-5" />
               </div>
-              <span className="text-[#FFFFFF] text-base md:text-lg">
+              <span className="text-[#FFFFFF] text-sm sm:text-base md:text-lg">
                 FALAR COM <span className="font-regular">ESPECIALISTA</span>
               </span>
             </a>
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="flex flex-col justify-between mr-8">
+          <div className="flex flex-col justify-between mr-0 sm:mr-4 md:mr-8">
             <div className="flex flex-col">
               {rows.map((row, rowIndex) => (
-                <div key={rowIndex} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 py-4">
+                <div key={rowIndex} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 py-3 sm:py-4">
                   {row.map((logo, idx) => (
-                    <div key={idx} className="relative w-full h-14 flex items-center justify-center">
-                      <Image src={`/logos/${logo}.png`} alt={logo} fill className="object-contain" />
+                    <div key={idx} className="relative w-full h-12 sm:h-14 md:h-16 flex items-center justify-center bg-white/5 rounded-lg hover:bg-white/10 transition">
+                      <Image src={`/logos/${logo}.png`} alt={logo} fill className="object-contain p-2" />
                     </div>
                   ))}
                 </div>

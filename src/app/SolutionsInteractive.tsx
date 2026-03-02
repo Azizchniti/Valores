@@ -63,7 +63,7 @@ export default function SolutionsInteractive({ solutions = [] }: Props) {
             whileTap={{ scale: 0.97 }}
             className={`
               flex flex-col items-center justify-center
-              w-[260px] h-[260px]
+              w-[200px] h-[200px]
               rounded-[26px] bg-white shadow-md transition-all
               ${activeIndex === i ? "ring-2 ring-[#58A8AB]" : ""}
             `}

@@ -5,8 +5,14 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section className="relative bg-transparent md:-mt-10 z-10">
+       <div
+        className="absolute inset-x-0 top-0 h-24 md:h-32"
+        style={{
+          backgroundColor: "#000000",
+        }}
+      />
       <div
-        className="relative max-w-[1600px] mx-auto overflow-hidden rounded-t-[48px]"
+       className="relative w-full overflow-hidden rounded-t-[48px]"
         style={{
           backgroundColor: "#4FB3B6",
           backgroundImage: "url('/image/backgrounds/Grid.png')",
