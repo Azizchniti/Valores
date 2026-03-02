@@ -33,19 +33,26 @@ export default function Partners() {
             </div>
 
             {/* ✅ Button as a safe link */}
-            <a
-              href="https://wa.me/553187954089"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 bg-[#58a8ab] rounded-full hover:bg-[#4a9699] transition max-w-full lg:max-w-md mt-6 sm:mt-8 lg:mt-8 mx-auto lg:mx-0"
-            >
-              <div className="flex w-6 h-6 sm:w-7 sm:h-7 items-center justify-center bg-[#fafdff] rounded-full">
-                <Image alt="WhatsApp" src="/image/icons/whatsapp2.png" width={16} height={16} className="sm:w-5 sm:h-5" />
-              </div>
-              <span className="text-[#FFFFFF] text-sm sm:text-base md:text-lg">
-                FALAR COM <span className="font-regular">ESPECIALISTA</span>
-              </span>
-            </a>
+         <a
+            href="https://wa.me/553187954089"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-3 px-6 py-3 bg-[#58a8ab] rounded-full hover:bg-[#4a9699] transition w-full lg:w-auto max-w-md mt-6 sm:mt-8"
+          >
+            <div className="flex w-6 h-6 sm:w-7 sm:h-7 items-center justify-center bg-[#fafdff] rounded-full shrink-0">
+              <Image
+                alt="WhatsApp"
+                src="/image/icons/whatsapp2.png"
+                width={16}
+                height={16}
+                className="sm:w-5 sm:h-5"
+              />
+            </div>
+
+            <span className="text-white text-sm sm:text-base md:text-lg text-center">
+              FALAR COM <span className="font-normal">ESPECIALISTA</span>
+            </span>
+          </a>
           </div>
 
           {/* RIGHT COLUMN */}
