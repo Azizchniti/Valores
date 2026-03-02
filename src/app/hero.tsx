@@ -25,8 +25,8 @@ const Hero: React.FC = () => {
           inset-0
           w-full
           h-full
-          object-contain
-          lg:object-cover
+          object-cover
+    
         "
       />
 

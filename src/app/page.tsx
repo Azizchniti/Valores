@@ -18,7 +18,7 @@ export default function Campaign() {
       <Hero />
 
       {/* introductions + solutions */}
-      <div className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat">
+      <div className="relative w-full bg-center bg-cover bg-no-repeat">
         <section id="quem-somos">
           <Introduction />
         </section>
@@ -49,7 +49,7 @@ export default function Campaign() {
 
       {/* Trabalhe Conosco */}
       <div
-        className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
+        className="relative w-full bg-center bg-cover bg-no-repeat"
         style={{
           backgroundImage: "url('/image/backgrounds/bgcontact.webp')",
         }}
