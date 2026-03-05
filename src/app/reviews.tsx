@@ -67,7 +67,7 @@ export default function VideoReviewsSection() {
           backgroundSize: "700px",
         }}
       >
-        <div className="relative z-10 py-20">
+     
           {/* Title */}
           <h2 className="text-center text-3xl md:text-4xl font-regular text-[#0B1E23] mb-16">
             O QUE NOSSOS <span className="text-white">PARCEIROS</span>
@@ -149,7 +149,6 @@ export default function VideoReviewsSection() {
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 }
