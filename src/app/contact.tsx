@@ -11,7 +11,14 @@ export default function BusinessForm() {
     servicos: "",
     mensagem: "",
   });
-
+  const services = [
+  "Automação de Processos",
+  "RH & Departamento Pessoal",
+  "Comercial & Vendas",
+  "Financeiro",
+  "Marketing & Trade Marketing",
+];
+const [open, setOpen] = React.useState(false);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"success" | "error" | "">("");
 
@@ -107,40 +114,33 @@ export default function BusinessForm() {
               />
             ))}
 
-           <div className="relative">
-              <select
-                name="servicos"
-                value={formData.servicos}
-                onChange={handleChange}
-                required
-                className="
-                  w-full
-                  appearance-none
-                  bg-transparent
-                  border-b-2 border-white/40
-                  py-3 pr-10
-                  text-white
-                  outline-none
-                  transition
-                  focus:border-white
-                  hover:border-white/70
-                "
-              >
-                <option value="" disabled className="text-black">
-                  Nossos serviços
-                </option>
-                <option className="text-black">Automação de Processos</option>
-                <option className="text-black">RH & Departamento Pessoal</option>
-                <option className="text-black">Comercial & Vendas</option>
-                <option className="text-black">Financeiro</option>
-                <option className="text-black">Marketing & Trade Marketing</option>
-              </select>
+         <div className="relative w-full">
+            <button
+              type="button"
+              onClick={() => setOpen(!open)}
+              className="w-full text-left border-b-2 border-white/40 py-3 text-white flex justify-between items-center hover:border-white/70"
+            >
+              {formData.servicos || "Nossos serviços"}
+              <span className="text-white/70">▼</span>
+            </button>
 
-              {/* Custom arrow */}
-              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-white/70">
-                ▼
-              </span>
-            </div>
+            {open && (
+              <ul className="absolute z-50 w-full mt-2 bg-[#0f1720] border border-white/10 rounded-lg shadow-lg overflow-hidden">
+                {services.map((service, i) => (
+                  <li
+                    key={i}
+                    onClick={() => {
+                      setFormData({ ...formData, servicos: service });
+                      setOpen(false);
+                    }}
+                    className="px-4 py-3 text-white cursor-pointer hover:bg-white/10 transition"
+                  >
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
 
 
             {/* MESSAGE */}
