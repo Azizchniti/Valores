@@ -212,58 +212,58 @@ const metodologiaSteps = [
 ];
 
 /* ===================== COMPONENT ===================== */
+/* ===================== COMPONENT ===================== */
 
 export default function AutomacaoProcessos() {
   return (
     <>
      {/* SERVICES GRID */}
-<div className="
-  relative z-10
-  px-3 sm:px-12
-  pb-12
-  grid
-  grid-cols-1
-  xs:grid-cols-2
-  sm:grid-cols-3
-  gap-4 sm:gap-6
-">
-  {containerData.map((container, idx) => (
-    <div
-      key={idx}
-      className="
-        bg-[#003C4D]
-        rounded-3xl
-        p-4 sm:p-6
-        flex flex-col items-center gap-4
-        w-full
-        max-w-none sm:max-w-[320px]
-        mx-auto
-      "
-    >
-      <FiUser size={34} className="text-white" />
+{/* SERVICES GRID */}
+<div className="relative z-10 px-6 sm:px-12 pb-12">
+  <div
+    className="
+      max-w-7xl
+      mx-auto
+      grid
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-3
+      gap-4 sm:gap-6
+    "
+  >
+    {containerData.map((container, idx) => (
+      <div
+        key={idx}
+        className="
+          bg-[#003C4D]
+          rounded-3xl
+          p-5 sm:p-6
+          flex flex-col items-center gap-4
+          w-full
+        "
+      >
+        <FiUser size={34} className="text-white" />
 
-      <h5 className="text-[#59A8AD] font-semibold text-center">
-        {container.title}
-      </h5>
+        <h5 className="text-[#59A8AD] font-semibold text-center text-[16px] sm:text-[17px]">
+          {container.title}
+        </h5>
 
-      <ul className="w-full flex flex-col gap-2">
-        {container.services.map((service, sidx) => (
-          <li
-            key={sidx}
-            className="flex items-start gap-3"
-          >
-            <div className="w-10 h-5 bg-[#59A8AD] rounded-full relative flex-shrink-0">
-              <div className="w-3 h-3 bg-[#003C4D] rounded-full absolute right-1 top-1" />
-            </div>
+        <ul className="w-full flex flex-col gap-2">
+          {container.services.map((service, sidx) => (
+            <li key={sidx} className="flex items-start gap-3">
+              <div className="w-10 h-5 bg-[#59A8AD] rounded-full relative flex-shrink-0">
+                <div className="w-3 h-3 bg-[#003C4D] rounded-full absolute right-1 top-1" />
+              </div>
 
-            <span className="text-white text-[13px] sm:text-sm flex-1">
-              {service}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  ))}
+              <span className="text-white text-[13px] sm:text-sm flex-1 leading-relaxed">
+                {service}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
 </div>
 
 
@@ -276,12 +276,13 @@ export default function AutomacaoProcessos() {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
     {metodologiaSteps.map((step) => (
       <div key={step.number} className="flex flex-col gap-6 h-full">
-        <div className="flex flex-col sm:flex-row sm:items-start items-center gap-4 sm:gap-6">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5 w-full">
           {/* Number Circle */}
           <div
             className="
-              w-[64px] sm:w-[96px]
-              h-[64px] sm:h-[96px]
+              w-[54px] sm:w-[70px]
+              h-[54px] sm:h-[70px]
+              text-[24px] sm:text-[30px]
               rounded-full
               flex
               items-center
@@ -289,7 +290,6 @@ export default function AutomacaoProcessos() {
               flex-shrink-0
               text-white
               font-bold
-              text-[32px] sm:text-[48px]
               leading-none
               translate-y-[1px]
             "
@@ -299,7 +299,7 @@ export default function AutomacaoProcessos() {
           </div>
 
           {/* Step Title */}
-          <h4 className="text-white font-bold text-[24px] sm:text-[42px] leading-tight text-center sm:text-left">
+          <h4 className="text-white font-bold text-[18px] sm:text-[20px] md:text-[26px] leading-snug text-center sm:text-left break-words max-w-full">
             {step.title}
           </h4>
         </div>
