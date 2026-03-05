@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 export default function AboutSection() {
   return (
-    <section className="relative bg-transparent md:-mt-10 z-10">
+    <section className="relative bg-transparent md:-mt-6 z-10">
        <div
         className="absolute inset-x-0 top-0 h-24 md:h-32"
         style={{
@@ -24,7 +24,7 @@ export default function AboutSection() {
         <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-12 mt-12 flex flex-col md:flex-row items-center md:items-start">
           
           {/* IMAGE */}
-          <div className="absolute top-[-110%] right-[-20%] hidden md:block">
+          <div className="absolute top-[-110%] right-[-20%] hidden lg:block">
             <div className="relative w-[110vw] max-w-[880px] aspect-[3/4]">
               <Image
                 src="/image/Modelos.png"
@@ -39,7 +39,7 @@ export default function AboutSection() {
           {/* TEXT */}
           <div className="max-w-full md:max-w-[480px] md:ml-16 mx-auto flex flex-col items-center md:items-start text-center md:text-left">
 
-            <h1 className="text-white text-[20px] sm:text-[24px] md:text-[38px] lg:text-[28px] leading-[1.2] tracking-wide font-semibold uppercase">
+            <h1 className="text-white text-[20px] sm:text-[22px] md:text-[26px] lg:text-[30px] leading-[1.2] tracking-wide font-semibold uppercase">
               <span className="text-black">
                 SIMPLIFICAMOS PROCESSOS
               </span>

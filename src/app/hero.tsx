@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[90vh] overflow-hidden bg-black">
+    <section className="relative w-full h-[60svh] min-h-[420px] sm:h-[70svh] lg:h-[90vh] overflow-hidden bg-black">
       
       <video
         autoPlay
