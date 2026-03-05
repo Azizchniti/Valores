@@ -61,7 +61,7 @@ export default function Partners() {
               {rows.map((row, rowIndex) => (
                 <div key={rowIndex} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 py-3 sm:py-4">
                   {row.map((logo, idx) => (
-                    <div key={idx} className="relative w-full h-12 sm:h-14 md:h-16 flex items-center justify-center bg-white/5 rounded-lg hover:bg-white/10 transition">
+                    <div key={idx} className="relative w-full h-20 sm:h-14 md:h-16 flex items-center justify-center bg-white/5 rounded-lg hover:bg-white/10 transition">
                       <Image src={`/logos/${logo}.png`} alt={logo} fill className="object-contain p-2" />
                     </div>
                   ))}
