@@ -299,7 +299,7 @@ export default function AutomacaoProcessos() {
           </div>
 
           {/* Step Title */}
-          <h4 className="text-white font-bold text-[18px] sm:text-[20px] md:text-[26px] leading-snug text-center sm:text-left break-words max-w-full">
+         <h4 className="text-white font-bold text-[16px] sm:text-[18px] md:text-[24px] leading-snug text-center sm:text-left break-normal text-balance max-w-full">
             {step.title}
           </h4>
         </div>
