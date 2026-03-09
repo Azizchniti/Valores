@@ -34,10 +34,7 @@ export default function Campaign() {
       {/* Cases de Sucesso */}
       <section
         id="cases"
-        className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: "url('/image/backgrounds/reviews-bg2.svg')",
-        }}
+        className="bg-[#9ECFD0]"
       >
         <WhyChooseUs />
       </section>
