@@ -7,13 +7,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const reviews = [
   {
     video:
-      "https://res.cloudinary.com/ddewzsm7q/video/upload/v1761915329/Valores/Profa._Lia_Brasil_-_Diretora_CCS_Unifor_Feito_com_o_Clipchamp_1_kffkoe.mp4",
-    author: "Empresa 01",
+      "https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773837441/Telma_Gestora_RH_Faculdade_Bahiana_de_Medicina_2_jmdwrt.mp4",
+    author: "Faculdade Bahiana de Medicina",
   },
   {
     video:
-      "https://res.cloudinary.com/ddewzsm7q/video/upload/v1761913325/Valores/Prof._Marcelo_-_Diplan_Unifor_Feito_com_o_Clipchamp_1_xbai7t.mp4",
-    author: "Empresa 02",
+      "https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773867639/Depoimento_Wesley_NAMI_Gestor_Cl%C3%ADnica_Escola_Unifor_eawb87.mp4",
+    author: "NAMI - Gestor Clínica Escola Unifor",
   },
 ];
 
