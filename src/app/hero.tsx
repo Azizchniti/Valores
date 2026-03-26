@@ -4,25 +4,32 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-[60svh] min-h-[420px] sm:h-[70svh] lg:h-[90vh] overflow-hidden bg-black">
-      
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source
-          src="https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773867643/Hero_tkc5zi.mp4"
-          type="video/mp4"
-        />
-      </video>
+   <section className="relative w-full h-[60svh] min-h-[420px] sm:h-[70svh] lg:h-[90vh] overflow-hidden bg-black">
+  
+  {/* Fallback image */}
+  <img
+    src="https://res.cloudinary.com/dkrnjy7fy/image/upload/fallback.jpg"
+    alt="background"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
 
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#000409] to-transparent" />
-      
-    </section>
+  {/* Video */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+    <source
+      src="https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773867643/Hero_tkc5zi.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+  <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#000409] to-transparent" />
+</section>
   );
 };
 
