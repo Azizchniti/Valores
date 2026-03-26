@@ -13,24 +13,55 @@ interface InstagramPost {
 export default function Posts() {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
+useEffect(() => {
+  const mockPosts: InstagramPost[] = [
+    {
+      id: "1",
+      caption: "Transformando resultados com marketing digital 🚀",
+      media_type: "IMAGE",
+      media_url: "/image/blogs/post1.jpg",
+      permalink: "https://www.instagram.com/valoressolucoes/",
+    },
+    {
+      id: "2",
+      caption: "Mais um cliente satisfeito 💼",
+      media_type: "IMAGE",
+      media_url: "/image/blogs/post2.jpg",
+      permalink: "https://www.instagram.com/valoressolucoes/",
+    },
+    {
+      id: "3",
+      caption: "Resultados reais, estratégias inteligentes 📊",
+      media_type: "IMAGE",
+      media_url: "/image/blogs/post3.jpg",
+      permalink: "https://www.instagram.com/valoressolucoes/",
+    },
+  ];
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const res = await fetch(
-          `https://graph.instagram.com/${process.env.NEXT_PUBLIC_IG_USER_ID}/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${process.env.NEXT_PUBLIC_IG_TOKEN}`
-        );
-        const data = await res.json();
-        setPosts((data.data || []).slice(0, 3));
-      } catch (error) {
-        console.error("Error loading Instagram posts", error);
-      } finally {
-        setLoading(false);
+  const fetchPosts = async () => {
+    try {
+      const res = await fetch(
+        `https://graph.instagram.com/${process.env.NEXT_PUBLIC_IG_USER_ID}/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${process.env.NEXT_PUBLIC_IG_TOKEN}`
+      );
+
+      const data = await res.json();
+
+      // 🔥 KEY FIX: if API fails or token expired → fallback
+      if (!data.data || data.error) {
+        throw new Error("Instagram API failed");
       }
-    };
 
-    fetchPosts();
-  }, []);
+      setPosts(data.data.slice(0, 3));
+    } catch (error) {
+      console.warn("Using mock Instagram posts");
+      setPosts(mockPosts);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchPosts();
+}, []);
 
   return (
     <section className="relative">
