@@ -79,7 +79,7 @@ const [open, setOpen] = React.useState(false);
     >
       <div className="mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-8 items-start">
         {/* LEFT TEXT */}
-        <div className="max-w-md lg:ml-24 mt-28">
+        <div className="max-w-md mx-auto lg:mx-0 lg:ml-24 mt-16 lg:mt-28 text-center lg:text-left">
           <h1 className="text-[#5BC4C6] text-4xl font-semibold leading-tight uppercase">
             Chega de navegar em meio às tempestades do dia a dia.
           </h1>
@@ -92,7 +92,7 @@ const [open, setOpen] = React.useState(false);
         </div>
 
         {/* FORM CARD */}
-        <div className="bg-[#5BC4C6] rounded-[36px] px-10 py-10 max-w-md w-full">
+        <div className="bg-[#5BC4C6] rounded-[36px] px-10 py-10 max-w-md w-full mx-auto lg:mx-0">
           <h2 className="text-white text-lg font-semibold uppercase mb-6">
             Pronto para recalcular a rota do <b>seu negócio</b>?
           </h2>
