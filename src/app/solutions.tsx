@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import SolutionsInteractive from "./SolutionsInteractive";
+import { useInView } from "framer-motion";
 
 const KPI_COLOR = "#203b5eff";
 const ACCENT_COLOR = "#58A8AB";
@@ -68,6 +69,8 @@ const SOLUTIONS: Solution[] = [
 ];
 
 export default function ResultadosSection() {
+  const ref = React.useRef(null);
+const isInView = useInView(ref, { once: true });
   return (
     <section className="relative">
       {/* TOP BACKGROUND */}
@@ -104,8 +107,10 @@ export default function ResultadosSection() {
     {/* KPI SECTION */}
     <div className="mt-10 flex flex-wrap justify-center gap-4 md:gap-x-2 md:gap-y-2">
       {KPIS.map(({ number, suffix, prefix, subtitle }, i) => (
+        
         <motion.div
           key={i}
+           ref={ref}
           className="flex flex-col items-center w-full sm:w-[200px] md:w-[280px] px-2"
           initial={{ opacity: 0, y: 40, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -135,18 +140,16 @@ export default function ResultadosSection() {
                     textShadow: "0px 0px 12px rgba(88,168,171,0.25)",
                   }}
                   className="font-bold"
-                >
+                      >
                   <CountUp
-                    start={0}
-                    end={number}
-                    duration={4.0} // (you can keep 3.2 if you prefer slower)
-                    decimals={number % 1 !== 0 ? 1 : 0}
-                    separator="."
-                    useEasing
-                    easingFn={(t, b, c, d) =>
-                      c * (-Math.pow(2, (-10 * t) / d) + 1) + b
-                    }
-                  />
+                  key={isInView ? "visible" : "hidden"}
+                  start={0}
+                  end={number}
+                  duration={4.0}
+                  decimals={number % 1 !== 0 ? 1 : 0}
+                  separator="."
+                  useEasing
+                />
                 </span>
 
                 <span
