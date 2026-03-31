@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="https://res.cloudinary.com/dkrnjy7fy/video/upload/q_auto:good,f_auto,vc_auto/v1773867643/Hero_tkc5zi.mp4"
+          src="https://res.cloudinary.com/dkrnjy7fy/video/upload/v1774902863/ValoresNewVid_wuzdc9.mp4"
           type="video/mp4"
         />
       </video>

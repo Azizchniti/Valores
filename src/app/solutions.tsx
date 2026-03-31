@@ -6,15 +6,35 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import SolutionsInteractive from "./SolutionsInteractive";
 
-const KPIS = [
-  { value: "+3.277", subtitle: "Fluxos de trabalho automatizados" },
-  { value: "+2.2 Mi", subtitle: "De horas humanas economizadas anualmente" },
-  { value: "+3.508%", subtitle: "De ROI gerado para nossos clientes" },
-  { value: "4-6 meses", subtitle: "Tempo médio de Payback dos projetos" },
-];
-
 const KPI_COLOR = "#203b5eff";
 const ACCENT_COLOR = "#58A8AB";
+
+const KPIS = [
+  {
+    number: 3.277,
+    suffix: "Mil",
+    prefix: "+",
+    subtitle: "Fluxos de trabalho automatizados",
+  },
+  {
+    number: 2.2,
+    suffix: "Mi",
+    prefix: "+",
+    subtitle: "De horas humanas economizadas anualmente",
+  },
+  {
+    number: 3.508,
+    suffix: "%",
+    prefix: "+",
+    subtitle: "De ROI gerado para nossos clientes",
+  },
+  {
+    number: "4-6",
+    suffix: "meses",
+    prefix: "",
+    subtitle: "Tempo médio de Payback dos projetos",
+  },
+];
 
 interface Solution {
   icon: string;
@@ -31,7 +51,6 @@ const SOLUTIONS: Solution[] = [
       "Elimine gargalos, reduza custos operacionais e libere sua equipe para focar no que realmente importa: a inovação.",
     buttonText: "Conheça a Automação Inteligente",
   },
-  
   {
     icon: "/logos/sol23.png",
     title: "Inteligência Comercial",
@@ -51,7 +70,7 @@ const SOLUTIONS: Solution[] = [
 export default function ResultadosSection() {
   return (
     <section className="relative">
-      {/* TOP CONTINUATION BACKGROUND */}
+      {/* TOP BACKGROUND */}
       <div
         className="absolute inset-x-0 top-0 h-24 md:h-32"
         style={{
@@ -62,95 +81,114 @@ export default function ResultadosSection() {
         }}
       />
 
-      {/* BOTTOM CONTINUATION BACKGROUND */}
+      {/* BOTTOM BACKGROUND */}
       <div
         className="absolute inset-x-0 bottom-0 h-24 md:h-32"
-        style={{
-          backgroundColor: "#000000",
-        }}
+        style={{ backgroundColor: "#000000" }}
       />
 
-      {/* MAIN CONTAINER / CARD */}
+      {/* MAIN CONTAINER */}
       <div
         className="relative z-10 rounded-t-[92px] rounded-b-[92px] py-12 px-4 md:py-20 md:px-10 w-full"
         style={{ backgroundColor: "#E0E0E0" }}
       >
-        {/* First Title */}
-        <div className="text-center">
-          <h2 className="text-[#01050A] font-regular uppercase mt-2 text-lg md:text-[26px] leading-7 md:leading-[38px] tracking-wide">
-            RESULTADOS QUE REDEFINEM O
-            <br />
-            <span className="text-[#58A8AB]"> SEU NEGÓCIO</span>
-          </h2>
-        </div>
+        {/* TITLE */}
+      <div className="text-center">
+      <h2 className="text-[#01050A] font-bold uppercase mt-2 text-lg md:text-[32px] leading-7 md:leading-[42px] tracking-wide">
+        RESULTADOS QUE REDEFINEM O
+        <br />
+        <span className="text-[#58A8AB] font-bold"> SEU NEGÓCIO</span>
+      </h2>
+    </div>
 
-        {/* KPI Section */}
-        <div className="mt-10 flex flex-wrap justify-center gap-4 md:gap-x-2 md:gap-y-2">
-          {KPIS.map(({ value, subtitle }, i) => {
-            const numericValue = parseFloat(value.replace(/[^0-9.]/g, ""));
-            const isPlus = value.includes("+");
+    {/* KPI SECTION */}
+    <div className="mt-10 flex flex-wrap justify-center gap-4 md:gap-x-2 md:gap-y-2">
+      {KPIS.map(({ number, suffix, prefix, subtitle }, i) => (
+        <motion.div
+          key={i}
+          className="flex flex-col items-center w-full sm:w-[200px] md:w-[280px] px-2"
+          initial={{ opacity: 0, y: 40, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          whileHover={{ scale: 1.05 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.5,
+            delay: i * 0.12,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <h3 className="uppercase leading-none text-center font-bold text-3xl sm:text-3xl md:text-[34px] tracking-tight">
+            {typeof number === "number" ? (
+              <span className="flex items-end justify-center gap-1">
+                {prefix && (
+                  <span
+                    style={{ color: ACCENT_COLOR }}
+                    className="text-[0.8em] font-bold"
+                  >
+                    {prefix}
+                  </span>
+                )}
 
-            return (
-              <motion.div
-                key={i}
-                className="flex flex-col items-center w-full sm:w-[200px] md:w-[280px] px-2"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.5 }}
-                transition={{ duration: 0.2, delay: i * 0.2, ease: "easeOut" }}
-              >
-                <h3 className="uppercase leading-none text-center font-regular text-2xl sm:text-3xl md:text-[34px] tracking-tight">
-                  {i < 3 ? (
-                    <span>
-                      {isPlus && (
-                        <span style={{ color: ACCENT_COLOR, marginRight: "2px" }}>+</span>
-                      )}
-                      <span style={{ color: KPI_COLOR }}>
-                        <CountUp
-                          start={0}
-                          end={numericValue}
-                          duration={15}
-                          decimals={numericValue % 1 !== 0 ? 1 : 0}
-                          redraw
-                        />
-                        {(i === 0 || i === 1) && " mi"}
-                        {i === 2 && "%"}
-                      </span>
-                    </span>
-                  ) : (
-                    <span>
-                      <span style={{ color: KPI_COLOR }}>4–6</span>
-                      <span
-                        style={{
-                          color: ACCENT_COLOR,
-                          fontSize: "20px",
-                          fontWeight: 600,
-                          marginLeft: "4px",
-                          textTransform: "lowercase",
-                        }}
-                      >
-                        meses
-                      </span>
-                    </span>
-                  )}
-                </h3>
-                <p className="text-center text-sm md:text-[15px] mt-2 max-w-[140px] md:max-w-[160px]">
-                  {subtitle}
-                </p>
-              </motion.div>
-            );
-          })}
-        </div>
+                <span
+                  style={{
+                    color: KPI_COLOR,
+                    textShadow: "0px 0px 12px rgba(88,168,171,0.25)",
+                  }}
+                  className="font-bold"
+                >
+                  <CountUp
+                    start={0}
+                    end={number}
+                    duration={4.0} // (you can keep 3.2 if you prefer slower)
+                    decimals={number % 1 !== 0 ? 1 : 0}
+                    separator="."
+                    useEasing
+                    easingFn={(t, b, c, d) =>
+                      c * (-Math.pow(2, (-10 * t) / d) + 1) + b
+                    }
+                  />
+                </span>
 
-        {/* Second Title */}
+                <span
+                  style={{ color: ACCENT_COLOR }}
+                  className="text-[0.6em] ml-1 font-bold tracking-wide"
+                >
+                  {suffix}
+                </span>
+              </span>
+            ) : (
+              <span className="flex items-end justify-center gap-1">
+                <span style={{ color: KPI_COLOR }} className="font-bold">
+                  {number}
+                </span>
+                <span
+                  style={{ color: ACCENT_COLOR }}
+                  className="text-[0.7em] font-bold"
+                >
+                  {suffix}
+                </span>
+              </span>
+            )}
+          </h3>
+
+          <p className="text-center text-base md:text-[16px] leading-snug mt-2 max-w-[140px] md:max-w-[160px] font-semibold">
+            {subtitle}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+
+        {/* SECOND TITLE */}
         <div className="mt-16 text-center">
-          <h2 className="text-[#01050A] font-regular uppercase text-lg sm:text-xl md:text-[28px] leading-7 sm:leading-8 md:leading-[40px]">
+         <h2 className="text-[#01050A] font-bold uppercase mt-2 text-lg md:text-[32px] leading-7 md:leading-[42px] tracking-wide">
             Soluções integradas para uma <br />
-            <span className="text-[#58A8AB]">gestão à prova de tempo</span>
+            <span className="text-[#58A8AB]">
+              gestão à prova de tempo
+            </span>
           </h2>
         </div>
 
-        {/* Solutions Section */}
+        {/* SOLUTIONS */}
         <SolutionsInteractive solutions={SOLUTIONS} />
       </div>
     </section>

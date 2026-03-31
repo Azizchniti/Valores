@@ -9,11 +9,15 @@ const reviews = [
     video:
       "https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773837441/Telma_Gestora_RH_Faculdade_Bahiana_de_Medicina_2_jmdwrt.mp4",
     author: "Faculdade Bahiana de Medicina",
+    quote:
+      "Conseguimos eliminar gargalos e melhorar a eficiência dos nossos processos internos, trazendo mais agilidade para toda a equipe.",
   },
   {
     video:
       "https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773867639/Depoimento_Wesley_NAMI_Gestor_Cl%C3%ADnica_Escola_Unifor_eawb87.mp4",
     author: "NAMI - Gestor Clínica Escola Unifor",
+    quote:
+      "A solução trouxe mais controle e organização para nossa operação, permitindo decisões mais rápidas e assertivas no dia a dia.",
   },
 ];
 
@@ -113,9 +117,7 @@ export default function VideoReviewsSection() {
                   />
 
                   <p className="text-lg italic text-[#0B1E23] leading-relaxed">
-                    Conseguimos eliminar gargalos, reduzir custos operacionais e,
-                    pela primeira vez, liberar nossa equipe para focar no que
-                    realmente importa: <strong>inovar.</strong>
+                    {reviews[index].quote}
 
                     <span className="block mt-4 text-sm opacity-80">
                       {reviews[index].author}

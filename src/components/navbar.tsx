@@ -15,7 +15,7 @@ const navItems = [
   { id: 1, label: "Soluções", href: "#solucoes" },
   { id: 2, label: "Quem somos", href: "#quem-somos" },
   { id: 3, label: "Cases de Sucesso", href: "#cases" },
-   { id: 4, label: "Blog", href: "#blog" },
+   { id: 4, label: "Blog", href: "/blog" },
   {
     id: 5,
     label: "FALAR COM ESPECIALISTA",
@@ -75,35 +75,41 @@ export function Navbar() {
         {/* Desktop menu */}
         <div className="hidden lg:flex items-center gap-5 font-semibold text-sm">
          <ul className="flex gap-5 items-center">
-              {navItems.map((item) => {
-                const isCTA = item.label === "FALAR COM ESPECIALISTA";
+          {navItems.map((item) => {
+              const isCTA = item.label === "FALAR COM ESPECIALISTA";
+              const isInternal = !item.external && item.href.startsWith("/");
 
-                return (
-                  <li key={item.id}>
-                  <a
-                    href={item.href}
-                    target={item.external ? "_blank" : undefined}
-                    rel={item.external ? "noopener noreferrer" : undefined}
+              return (
+                <li key={item.id}>
+                  {isInternal ? (
+                    <Link
+                      href={item.href}
                       className={
                         isCTA
-                          ? `
-                            flex items-center gap-2
-                            px-5 py-2
-                            rounded-xl
-                            bg-gradient-to-r from-[#58a8ab] to-[#6fc6c9]
-                            text-white font-semibold
-                            shadow-md
-                            hover:opacity-90 transition
-                          `
+                          ? `flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-[#58a8ab] to-[#6fc6c9] text-white font-semibold shadow-md hover:opacity-90 transition`
+                          : "transition hover:text-[#58a8ab]"
+                      }
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={item.href}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
+                      className={
+                        isCTA
+                          ? `flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-[#58a8ab] to-[#6fc6c9] text-white font-semibold shadow-md hover:opacity-90 transition`
                           : "transition hover:text-[#58a8ab]"
                       }
                     >
                       {isCTA && <i className="fa-brands fa-whatsapp text-lg" />}
                       {item.label}
                     </a>
-                  </li>
-                );
-              })}
+                  )}
+                </li>
+              );
+            })}
             </ul>
         </div>
 

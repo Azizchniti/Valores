@@ -83,14 +83,14 @@ export default function SolutionsInteractive({ solutions = [] }: Props) {
                 />
 
                 <span
-                  className="
-                    mt-2 sm:mt-3 md:mt-5
-                    text-center font-semibold uppercase
-                    text-[11px] sm:text-[14px] md:text-[22px]
-                    leading-tight
-                  "
-                  style={{ color: "#58A8AB", letterSpacing: "1px" }}
-                >
+                    className="
+                      mt-2 sm:mt-3 md:mt-5
+                      text-center font-bold uppercase
+                      text-[14px] sm:text-[17px] md:text-[20px]
+                      leading-tight tracking-wide
+                    "
+                    style={{ color: "#58A8AB" }}
+                  >
                   {solution.title.split(" ").map((word, idx) => (
                     <span key={idx} className="block">
                       {word}
