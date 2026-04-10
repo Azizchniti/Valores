@@ -7,14 +7,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const reviews = [
   {
     video:
-      "https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773837441/Telma_Gestora_RH_Faculdade_Bahiana_de_Medicina_2_jmdwrt.mp4",
+      "https://vimeo.com/1182021716?share=copy&fl=sv&fe=ci",
     author: "Faculdade Bahiana de Medicina",
     quote:
       "Conseguimos eliminar gargalos e melhorar a eficiência dos nossos processos internos, trazendo mais agilidade para toda a equipe.",
   },
   {
     video:
-      "https://res.cloudinary.com/dkrnjy7fy/video/upload/v1773867639/Depoimento_Wesley_NAMI_Gestor_Cl%C3%ADnica_Escola_Unifor_eawb87.mp4",
+      "https://vimeo.com/1182021641?share=copy&fl=sv&fe=ci",
     author: "NAMI - Gestor Clínica Escola Unifor",
     quote:
       "A solução trouxe mais controle e organização para nossa operação, permitindo decisões mais rápidas e assertivas no dia a dia.",
@@ -93,14 +93,17 @@ export default function VideoReviewsSection() {
                   transition={{ duration: 0.4 }}
                   className="relative z-10 shrink-0"
                 >
-                  <video
-                    ref={videoRef}
-                    src={reviews[index].video}
-                    autoPlay
-                    muted
-                    controls
-                    className="w-[280px] h-[460px] object-cover rounded-[32px] shadow-xl bg-black"
-                  />
+                  <div className="w-[280px] h-[460px] rounded-[32px] overflow-hidden shadow-xl bg-black">
+                    <iframe
+                      src={`https://player.vimeo.com/video/${
+                        reviews[index].video.split("/").pop()?.split("?")[0]
+                      }?autoplay=1&muted=1&loop=0`}
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen"
+                      allowFullScreen
+                    />
+                  </div>
                 </motion.div>
               </AnimatePresence>
 
