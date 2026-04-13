@@ -93,17 +93,29 @@ export default function VideoReviewsSection() {
                   transition={{ duration: 0.4 }}
                   className="relative z-10 shrink-0"
                 >
-                  <div className="w-[280px] h-[460px] rounded-[32px] overflow-hidden shadow-xl bg-black">
-                    <iframe
-                      src={`https://player.vimeo.com/video/${
-                        reviews[index].video.split("/").pop()?.split("?")[0]
-                      }?autoplay=1&muted=1&loop=0`}
-                      className="w-full h-full"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen"
-                      allowFullScreen
-                    />
-                  </div>
+                <div className="w-[280px] h-[460px] rounded-[32px] overflow-hidden shadow-xl relative">
+
+                      {/* 🔥 Blurred background (fills everything) */}
+                      <iframe
+                        src={`https://player.vimeo.com/video/${
+                          reviews[index].video.split("/").pop()?.split("?")[0]
+                        }?autoplay=1&muted=1&background=1`}
+                        className="absolute inset-0 w-full h-full scale-125 blur-2xl opacity-50"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen"
+                      />
+
+                      {/* 🎥 Main video (clean, centered) */}
+                      <iframe
+                        src={`https://player.vimeo.com/video/${
+                          reviews[index].video.split("/").pop()?.split("?")[0]
+                        }?autoplay=1&muted=1`}
+                        className="absolute inset-0 w-full h-full"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen"
+                      />
+
+                    </div>
                 </motion.div>
               </AnimatePresence>
 
