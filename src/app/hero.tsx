@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 overflow-hidden">
         <iframe
           ref={iframeRef}
-          src="https://player.vimeo.com/video/1182021752?background=1&autoplay=1&muted=1&loop=1&playsinline=1"
+          src="https://player.vimeo.com/video/1182699178?background=1&autoplay=1&muted=1&loop=1&playsinline=1"
           className="absolute top-1/2 left-1/2 
                      w-[177.77vh] h-[100vh] 
                      min-w-[100vw] min-h-[56.25vw] 
