@@ -11,6 +11,7 @@ interface Post {
   content: string;
   published: string;
   url: string;
+  images?: { url: string }[];
 }
 
 const API_KEY = process.env.NEXT_PUBLIC_BLOGGER_API_KEY;
@@ -23,7 +24,7 @@ export default function BlogPage() {
 
   useEffect(() => {
     fetch(
-      `https://www.googleapis.com/blogger/v3/blogs/byurl?url=https://azizchniti.blogspot.com&key=${API_KEY}`
+      `https://www.googleapis.com/blogger/v3/blogs/byurl?url=https://valoressolucoes.blogspot.com&key=${API_KEY}`
     )
       .then((res) => res.json())
       .then((blogData) =>
@@ -50,6 +51,20 @@ export default function BlogPage() {
     if (!match) return "";
     return getHighResImage(match[1]);
   }
+  function getPostImage(post: Post) {
+  // 1. Try Blogger API images
+  if (post.images && post.images.length > 0) {
+    return post.images[0].url.replace(/\/s\d+(-c)?\//, "/s1600/");
+  }
+
+  // 2. Fallback to HTML parsing (your old logic)
+  const match = post.content.match(/<img[^>]+src="([^">]+)"/);
+  if (match) {
+    return match[1].replace(/\/s\d+(-c)?\//, "/s1600/");
+  }
+   return "/image/backgrounds/Grid.PNG";
+
+}
 
   function cleanText(html: string) {
   return html
@@ -112,7 +127,7 @@ function highlight(text: string, query: string) {
       {featured && (
         <div className="relative h-[85vh] w-full overflow-hidden">
           <motion.img
-            src={extractImage(featured.content)}
+            src={getPostImage(featured)}
             className="absolute inset-0 w-full h-full object-cover"
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
@@ -180,7 +195,7 @@ function highlight(text: string, query: string) {
 
               <div className="overflow-hidden">
                 <img
-                  src={extractImage(post.content)}
+                  src={getPostImage(post)}
                   className="w-full h-[240px] object-cover group-hover:scale-110 transition duration-700"
                 />
               </div>
