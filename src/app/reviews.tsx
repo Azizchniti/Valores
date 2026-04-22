@@ -19,6 +19,12 @@ const reviews = [
     quote:
       "A solução trouxe mais controle e organização para nossa operação, permitindo decisões mais rápidas e assertivas no dia a dia.",
   },
+ {
+  video: "https://vimeo.com/1185581630?share=copy&fl=sv&fe=ci",
+  author: "Prof. Lia Brasil - Diretora CCS Unifor",
+  quote:
+    "A visibilidade dos dados transformou a forma como conduzimos a gestão, trazendo mais segurança nas decisões e alinhamento estratégico entre as equipes.",
+},
 ];
 
 export default function VideoReviewsSection() {
