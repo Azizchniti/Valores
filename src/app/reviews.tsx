@@ -30,7 +30,12 @@ const reviews = [
 export default function VideoReviewsSection() {
   const [index, setIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
+
+  useEffect(() => {
+    setLoaded(false); // reset when changing video
+  }, [index]);
   // Next / Prev controls
   const next = () =>
     setIndex((prev) => (prev + 1) % reviews.length);
@@ -99,29 +104,21 @@ export default function VideoReviewsSection() {
                   transition={{ duration: 0.4 }}
                   className="relative z-10 shrink-0"
                 >
-                <div className="w-[280px] h-[460px] rounded-[32px] overflow-hidden shadow-xl relative">
+                <div className="w-[280px] h-[460px] rounded-[32px] overflow-hidden shadow-xl relative bg-black">
 
-                      {/* 🔥 Blurred background (fills everything) */}
-                      <iframe
-                        src={`https://player.vimeo.com/video/${
-                          reviews[index].video.split("/").pop()?.split("?")[0]
-                        }?autoplay=1&muted=1&background=1`}
-                        className="absolute inset-0 w-full h-full scale-125 blur-2xl opacity-50"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen"
-                      />
+                          {/* Soft loading state */}
+                          <div className="absolute inset-0 animate-pulse bg-[#0B1E23]" />
 
-                      {/* 🎥 Main video (clean, centered) */}
-                      <iframe
-                        src={`https://player.vimeo.com/video/${
-                          reviews[index].video.split("/").pop()?.split("?")[0]
-                        }?autoplay=1&muted=1`}
-                        className="absolute inset-0 w-full h-full"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen"
-                      />
-
-                    </div>
+                          <iframe
+                            src={`https://player.vimeo.com/video/${
+                              reviews[index].video.split("/").pop()?.split("?")[0]
+                            }?autoplay=1&muted=1&playsinline=1`}
+                            className="absolute inset-0 w-full h-full"
+                            frameBorder="0"
+                            allow="autoplay; fullscreen"
+                            loading="lazy"
+                          />
+                </div>
                 </motion.div>
               </AnimatePresence>
 
